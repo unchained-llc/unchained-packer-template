@@ -6,7 +6,6 @@
       "override": {
         "virtualbox": {
           "scripts": [
-            "scripts/base.sh",
             "scripts/chef.sh",
             "scripts/vagrant.sh",
             "scripts/virtualbox.sh",
@@ -20,7 +19,7 @@
     {
       "type": "vagrant",
       "virtualbox": {
-        "output": "UNCHAINED-CentOS-6.4-x86_64-v20131113.box"
+        "output": "UNCHAINED-CentOS-6.4-x86_64-v20131118.box"
       }
     }
   ],
