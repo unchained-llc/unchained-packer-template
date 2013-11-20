@@ -1,3 +1,4 @@
+date > /etc/vagrant_box_build_time
 cd ~vagrant
 mkdir -m 700 .ssh
 curl -L https://raw.github.com/mitchellh/vagrant/master/keys/vagrant.pub -o .ssh/authorized_keys

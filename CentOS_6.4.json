@@ -9,7 +9,8 @@
             "scripts/chef.sh",
             "scripts/vagrant.sh",
             "scripts/virtualbox.sh",
-            "scripts/cleanup.sh"
+            "scripts/cleanup.sh",
+            "scripts/zerodisk.sh"
           ]
         }
       }
@@ -19,7 +20,7 @@
     {
       "type": "vagrant",
       "virtualbox": {
-        "output": "UNCHAINED-CentOS-6.4-x86_64-v20131119.box"
+        "output": "UNCHAINED-CentOS-6.4-x86_64-v20131120.box"
       }
     }
   ],
