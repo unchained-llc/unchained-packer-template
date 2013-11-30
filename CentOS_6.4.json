@@ -20,7 +20,7 @@
     {
       "type": "vagrant",
       "virtualbox": {
-        "output": "UNCHAINED-CentOS-6.4-x86_64-v20131123.box"
+        "output": "UNCHAINED-CentOS-6.4-x86_64-v20131130.box"
       }
     }
   ],
@@ -33,12 +33,12 @@
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "boot_command": [
-        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg repo=http://ftp.iij.ad.jp/pub/linux/centos/6.4/os/x86_64<enter><wait>"
+        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait>"
       ],
       "disk_size": "100000",
       "hard_drive_interface": "sata",
       "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
-      "guest_additions_sha256": "f0b8fec99c65231641d5d01558abb53fe8b81f131dc71519cb7994c9e297300d",
+      "guest_additions_sha256": "f120793fa35050a8280eacf9c930cf8d9b88795161520f6515c0cc5edda2fe8a",
       "guest_os_type": "RedHat_64",
       "headless": "true",
       "http_directory": "http",
