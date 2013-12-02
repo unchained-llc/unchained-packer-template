@@ -20,15 +20,15 @@
     {
       "type": "vagrant",
       "virtualbox": {
-        "output": "UNCHAINED-CentOS-6.4-x86_64-v20131130.box"
+        "output": "UNCHAINED-CentOS-6.5-x86_64-v20131201.box"
       }
     }
   ],
   "builders": [
     {
       "type": "virtualbox",
-      "iso_url": "http://ftp.iij.ad.jp/pub/linux/centos/6.4/isos/x86_64/CentOS-6.4-x86_64-netinstall.iso",
-      "iso_checksum": "8b3a138e60aaeb172368701637c8b6f7ec39c0cb16978e69caeaff6bc4cfdf1b",
+      "iso_url": "http://ftp.iij.ad.jp/pub/linux/centos/6.5/isos/x86_64/CentOS-6.5-x86_64-netinstall.iso",
+      "iso_checksum": "d8aaf698408c0c01843446da4a20b1ac03d27f87aad3b3b7b7f42c6163be83b9",
       "iso_checksum_type": "sha256",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
