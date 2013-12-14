@@ -20,7 +20,7 @@
     {
       "type": "vagrant",
       "virtualbox": {
-        "output": "UNCHAINED-CentOS-6.5-x86_64-v20131201.box"
+        "output": "UNCHAINED-CentOS-6.5-x86_64-v20131212.box"
       }
     }
   ],
