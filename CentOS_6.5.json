@@ -20,7 +20,7 @@
     {
       "type": "vagrant",
       "virtualbox": {
-        "output": "UNCHAINED-CentOS-6.5-x86_64-v20131212.box"
+        "output": "UNCHAINED-CentOS-6.5-x86_64-v20131220.box"
       }
     }
   ],
@@ -38,7 +38,7 @@
       "disk_size": "100000",
       "hard_drive_interface": "sata",
       "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
-      "guest_additions_sha256": "f120793fa35050a8280eacf9c930cf8d9b88795161520f6515c0cc5edda2fe8a",
+      "guest_additions_sha256": "95648fcdb5d028e64145a2fe2f2f28c946d219da366389295a61fed296ca79f0",
       "guest_os_type": "RedHat_64",
       "headless": "true",
       "http_directory": "http",
