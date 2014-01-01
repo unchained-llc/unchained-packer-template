@@ -4,7 +4,7 @@
       "type": "shell",
       "execute_command": "sudo sh {{.Path}}",
       "override": {
-        "virtualbox": {
+        "virtualbox-iso": {
           "scripts": [
             "scripts/chef.sh",
             "scripts/vagrant.sh",
@@ -19,14 +19,12 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "virtualbox": {
-        "output": "UNCHAINED-CentOS-6.5-x86_64-v20131220.box"
-      }
+      "output": "UNCHAINED-CentOS-6.5-x86_64-v20140101.box"
     }
   ],
   "builders": [
     {
-      "type": "virtualbox",
+      "type": "virtualbox-iso",
       "iso_url": "http://ftp.iij.ad.jp/pub/linux/centos/6.5/isos/x86_64/CentOS-6.5-x86_64-netinstall.iso",
       "iso_checksum": "d8aaf698408c0c01843446da4a20b1ac03d27f87aad3b3b7b7f42c6163be83b9",
       "iso_checksum_type": "sha256",
