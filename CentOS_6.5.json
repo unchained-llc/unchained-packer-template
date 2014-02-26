@@ -19,7 +19,7 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "UNCHAINED-CentOS-6.5-x86_64-v20140223.box"
+      "output": "UNCHAINED-CentOS-6.5-x86_64-v20140226.box"
     }
   ],
   "builders": [
@@ -36,7 +36,7 @@
       "disk_size": "100000",
       "hard_drive_interface": "sata",
       "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
-      "guest_additions_sha256": "95648fcdb5d028e64145a2fe2f2f28c946d219da366389295a61fed296ca79f0",
+      "guest_additions_sha256": "a1e58f3a15cab81b82424c6382a490bb02377d78d537a57538692fa83ce448c7",
       "guest_os_type": "RedHat_64",
       "headless": "true",
       "http_directory": "http",
