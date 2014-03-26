@@ -1,7 +1,7 @@
 centos-packer
 =============
 
-CentOS 6.5 x86_64 + Chef 11.10 + VirtualBox 4.3.8 for Packer 0.5.2 Template
+CentOS 6.5 x86_64 + Chef 11.10 + VirtualBox 4.3.10 for Packer 0.5.2 Template
 
 ## Packer Build for VirtualBox
 
@@ -13,7 +13,7 @@ packer build -only virtualbox-iso CentOS_6.5.json
 ## Add Vagrant Box
 
 ```
-box add BOXNAME UNCHAINED-CentOS-6.5-x86_64-v20140306.box
+box add BOXNAME UNCHAINED-CentOS-6.5-x86_64-v20140326.box
 ```
 
 ## Vagrant Cloud
@@ -31,7 +31,7 @@ vagrant up
 ```
 mkdir centos
 cd centos
-vagrant init UNCHAINED-CentOS-6.5-x86_64-v20140306 http://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6.5-x86_64-v20140306.box
+vagrant init UNCHAINED-CentOS-6.5-x86_64-v20140326 http://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6.5-x86_64-v20140326.box
 vagrant up
 ```
 
@@ -42,12 +42,12 @@ vagrant up
 
    # Every Vagrant virtual environment requires a box to build off of.
 -  config.vm.box = "base"
-+  config.vm.box = "UNCHAINED-CentOS-6.5-x86_64-v20140306"
++  config.vm.box = "UNCHAINED-CentOS-6.5-x86_64-v20140326"
 
    # The url from where the 'config.vm.box' box will be fetched if it
    # doesn't already exist on the user's system.
 -  # config.vm.box_url = "http://domain.com/path/to/above.box"
-+  config.vm.box_url = "http://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6.5-x86_64-v20140306.box"
++  config.vm.box_url = "http://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6.5-x86_64-v20140326.box"
 
    # Create a forwarded port mapping which allows access to a specific port
    # within the machine from a port on the host machine. In the example below,
