@@ -1,7 +1,7 @@
 centos-packer
 =============
 
-CentOS 6.5 x86_64 + Chef 11.12 + VirtualBox 4.3.12 for Packer 0.6 Template
+CentOS 6.5 x86_64 + Chef 11.12 + VirtualBox 4.3.14 for Packer 0.6 Template
 
 ## Packer Build for VirtualBox
 
@@ -13,7 +13,7 @@ packer build -only virtualbox-iso CentOS_6.5.json
 ## Add Vagrant Box
 
 ```
-box add BOXNAME UNCHAINED-CentOS-6.5-x86_64-v20140622.box
+box add BOXNAME UNCHAINED-CentOS-6.5-x86_64-v20140716.box
 ```
 
 ## Vagrant Cloud
@@ -31,7 +31,7 @@ vagrant up
 ```
 mkdir centos
 cd centos
-vagrant init UNCHAINED-CentOS-6.5-x86_64-v20140622 http://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6.5-x86_64-v20140622.box
+vagrant init UNCHAINED-CentOS-6.5-x86_64-v20140716 http://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6.5-x86_64-v20140716.box
 vagrant up
 ```
 
