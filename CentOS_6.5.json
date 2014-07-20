@@ -2,24 +2,20 @@
   "provisioners": [
     {
       "type": "shell",
-      "execute_command": "sudo sh {{.Path}}",
-      "override": {
-        "virtualbox-iso": {
-          "scripts": [
-            "scripts/chef.sh",
-            "scripts/vagrant.sh",
-            "scripts/virtualbox.sh",
-            "scripts/cleanup.sh",
-            "scripts/zerodisk.sh"
-          ]
-        }
-      }
+      "execute_command": "sudo {{.Vars}} sh {{.Path}}",
+      "scripts": [
+        "scripts/chef.sh",
+        "scripts/vagrant.sh",
+        "scripts/vmtools.sh",
+        "scripts/cleanup.sh",
+        "scripts/zerodisk.sh"
+      ]
     }
   ],
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "UNCHAINED-CentOS-6.5-x86_64-v20140716.box"
+      "output": "UNCHAINED-CentOS-6.5-x86_64-v20140721-{{.Provider}}.box"
     }
   ],
   "builders": [
@@ -45,6 +41,28 @@
         [ "modifyvm", "{{.Name}}", "--memory", "512" ],
         [ "modifyvm", "{{.Name}}", "--cpus", "1" ]
       ]
+    },
+    {
+      "type": "vmware-iso",
+      "iso_url": "http://ftp.iij.ad.jp/pub/linux/centos/6.5/isos/x86_64/CentOS-6.5-x86_64-netinstall.iso",
+      "iso_checksum": "d8aaf698408c0c01843446da4a20b1ac03d27f87aad3b3b7b7f42c6163be83b9",
+      "iso_checksum_type": "sha256",
+      "ssh_username": "vagrant",
+      "ssh_password": "vagrant",
+      "disk_size": "100000",
+      "tools_upload_flavor": "linux",
+      "guest_os_type": "centos-64",
+      "headless": "true",
+      "shutdown_command": "sudo /sbin/halt -p",
+      "http_directory": "http",
+      "boot_command": [
+        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait>"
+      ],
+      "vmx_data": {
+        "memsize": "512",
+        "numvcpus": "1",
+        "vhv.enable": "TRUE"
+      }
     }
   ]
 }
