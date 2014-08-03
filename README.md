@@ -7,15 +7,15 @@ CentOS 6.5 x64 + Chef + VirtualBox/VMWare for Packer Template
 
 ```
 packer validate CentOS_6.5.json
-packer build [ -only virtualbox-iso | vmware-iso ] CentOS_6.5.json
+packer build [ -only virtualbox-iso | -only vmware-iso ] CentOS_6.5.json
 ```
 
 ## Add Vagrant Box
 
 ```
-box add BOXNAME UNCHAINED-CentOS-6.5-x86_64-v20140727-virtualbox.box
+box add BOXNAME UNCHAINED-CentOS-6.5-x86_64-v20140803-virtualbox.box
 or
-box add BOXNAME UNCHAINED-CentOS-6.5-x86_64-v20140727-vmware.box
+box add BOXNAME UNCHAINED-CentOS-6.5-x86_64-v20140803-vmware.box
 ```
 
 ## Vagrant Cloud
@@ -33,9 +33,9 @@ vagrant up
 ```
 mkdir centos
 cd centos
-vagrant init UNCHAINED-CentOS-6.5-x86_64-v20140727 http://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6.5-x86_64-v20140727-virtualbox.box
+vagrant init UNCHAINED-CentOS-6.5-x86_64-v20140803 http://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6.5-x86_64-v20140803-virtualbox.box
 or
-vagrant init UNCHAINED-CentOS-6.5-x86_64-v20140727 http://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6.5-x86_64-v20140727-vmware.box
+vagrant init UNCHAINED-CentOS-6.5-x86_64-v20140803 http://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6.5-x86_64-v20140803-vmware.box
 vagrant up
 ```
 
