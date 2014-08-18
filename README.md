@@ -6,6 +6,7 @@ CentOS 6.5 x64 + Chef + VirtualBox/VMWare for Packer Template
 ## Packer Build for VirtualBox
 
 ```
+cd centos6
 packer validate CentOS_6.5.json
 packer build [ -only virtualbox-iso | -only vmware-iso ] CentOS_6.5.json
 ```
