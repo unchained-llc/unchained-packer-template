@@ -15,7 +15,7 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "UNCHAINED-CentOS-6.5-x86_64-v20140905-{{.Provider}}.box"
+      "output": "UNCHAINED-CentOS-6.5-x86_64-v20140910-{{.Provider}}.box"
     }
   ],
   "builders": [
