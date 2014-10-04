@@ -1,0 +1,26 @@
+{
+  "variables": {
+    "aws_access_key": "{{env `AWS_ACCESS_KEY_ID`}}",
+    "aws_secret_key": "{{env `AWS_SECRET_ACCESS_KEY`}}"
+  },
+  "provisioners": [{
+    "type": "shell",
+    "execute_command": "sudo {{.Vars}} sh {{.Path}}",
+    "scripts": [
+      "scripts/update.sh",
+      "scripts/cloudinit.sh",
+      "scripts/chef.sh",
+      "scripts/cleanup.sh"
+    ]
+  }],
+  "builders": [{
+    "type": "amazon-ebs",
+    "access_key": "{{user `aws_access_key`}}",
+    "secret_key": "{{user `aws_secret_key`}}",
+    "region": "us-west-2",
+    "source_ami": "ami-b6bdde86",
+    "instance_type": "c3.xlarge",
+    "ssh_username": "root",
+    "ami_name": "CentOS6 Official with Update plus Cloudinit {{timestamp}}"
+  }]
+}
