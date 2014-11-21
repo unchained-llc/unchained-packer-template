@@ -14,11 +14,11 @@ packer build [ -only virtualbox-iso | -only vmware-iso ]  [ CentOS_6.5.json | Ce
 ## Add Vagrant Box
 
 ```
-box add BOXNAME UNCHAINED-CentOS-6.5-x86_64-v20141117-virtualbox.box
-box add BOXNAME UNCHAINED-CentOS-7.0-x86_64-v20141114-virtualbox.box
+box add BOXNAME UNCHAINED-CentOS-6.5-x86_64-v20141122-virtualbox.box
+box add BOXNAME UNCHAINED-CentOS-7.0-x86_64-v20141122-virtualbox.box
 or
-box add BOXNAME UNCHAINED-CentOS-6.5-x86_64-v20141117-vmware.box
-box add BOXNAME UNCHAINED-CentOS-7.0-x86_64-v20141114-vmware.box
+box add BOXNAME UNCHAINED-CentOS-6.5-x86_64-v20141122-vmware.box
+box add BOXNAME UNCHAINED-CentOS-7.0-x86_64-v20141122-vmware.box
 ```
 
 ## Vagrant Cloud
@@ -38,11 +38,11 @@ vagrant up
 ```
 mkdir centos
 cd centos
-vagrant init UNCHAINED-CentOS-6.5-x86_64-v20141117 http://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6.5-x86_64-v20141117-virtualbox.box
-vagrant init UNCHAINED-CentOS-7.0-x86_64-v20141114 http://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7.0-x86_64-v20141114-virtualbox.box
+vagrant init UNCHAINED-CentOS-6.5-x86_64-v20141122 http://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6.5-x86_64-v20141122-virtualbox.box
+vagrant init UNCHAINED-CentOS-7.0-x86_64-v20141122 http://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7.0-x86_64-v20141122-virtualbox.box
 or
-vagrant init UNCHAINED-CentOS-6.5-x86_64-v20141117 http://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6.5-x86_64-v20141117-vmware.box
-vagrant init UNCHAINED-CentOS-7.0-x86_64-v20141114 http://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7.0-x86_64-v20141114-vmware.box
+vagrant init UNCHAINED-CentOS-6.5-x86_64-v20141122 http://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6.5-x86_64-v20141122-vmware.box
+vagrant init UNCHAINED-CentOS-7.0-x86_64-v20141122 http://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7.0-x86_64-v20141122-vmware.box
 vagrant up
 ```
 
