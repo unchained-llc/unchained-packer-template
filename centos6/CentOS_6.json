@@ -1,4 +1,7 @@
 {
+  "variables": {
+    "version": "{{env `VERSION`}}"
+  },
   "provisioners": [
     {
       "type": "shell",
@@ -15,7 +18,7 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "UNCHAINED-CentOS-6.6-x86_64-v20141122-{{.Provider}}.box"
+      "output": "UNCHAINED-CentOS-6.6-x86_64-{{user `version`}}-{{.Provider}}.box"
     }
   ],
   "builders": [
