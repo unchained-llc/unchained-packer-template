@@ -8,17 +8,17 @@ CentOS 6.5 / 7.0 x64 + Chef + VirtualBox / VMWare for Packer Template
 ```
 cd centos6 or centos7
 packer validate [ CentOS_6.5.json | CentOS_7.0.json ]
-VERSION=v20150106 packer build [ -only virtualbox-iso | -only vmware-iso ]  [ CentOS_6.5.json | CentOS_7.0.json ]
+VERSION=v20150118 packer build [ -only virtualbox-iso | -only vmware-iso ]  [ CentOS_6.5.json | CentOS_7.0.json ]
 ```
 
 ## Add Vagrant Box
 
 ```
-box add BOXNAME UNCHAINED-CentOS-6.5-x86_64-v20150106-virtualbox.box
-box add BOXNAME UNCHAINED-CentOS-7.0-x86_64-v20150106-virtualbox.box
+box add BOXNAME UNCHAINED-CentOS-6.5-x86_64-v20150118-virtualbox.box
+box add BOXNAME UNCHAINED-CentOS-7.0-x86_64-v20150118-virtualbox.box
 or
-box add BOXNAME UNCHAINED-CentOS-6.5-x86_64-v20150106-vmware.box
-box add BOXNAME UNCHAINED-CentOS-7.0-x86_64-v20150106-vmware.box
+box add BOXNAME UNCHAINED-CentOS-6.5-x86_64-v20150118-vmware.box
+box add BOXNAME UNCHAINED-CentOS-7.0-x86_64-v20150118-vmware.box
 ```
 
 ## Vagrant Cloud
@@ -38,11 +38,11 @@ vagrant up
 ```
 mkdir centos
 cd centos
-vagrant init UNCHAINED-CentOS-6.5-x86_64-v20150106 http://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6.5-x86_64-v20150106-virtualbox.box
-vagrant init UNCHAINED-CentOS-7.0-x86_64-v20150106 http://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7.0-x86_64-v20150106-virtualbox.box
+vagrant init UNCHAINED-CentOS-6.5-x86_64-v20150118 http://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6.5-x86_64-v20150118-virtualbox.box
+vagrant init UNCHAINED-CentOS-7.0-x86_64-v20150118 http://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7.0-x86_64-v20150118-virtualbox.box
 or
-vagrant init UNCHAINED-CentOS-6.5-x86_64-v20150106 http://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6.5-x86_64-v20150106-vmware.box
-vagrant init UNCHAINED-CentOS-7.0-x86_64-v20150106 http://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7.0-x86_64-v20150106-vmware.box
+vagrant init UNCHAINED-CentOS-6.5-x86_64-v20150118 http://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6.5-x86_64-v20150118-vmware.box
+vagrant init UNCHAINED-CentOS-7.0-x86_64-v20150118 http://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7.0-x86_64-v20150118-vmware.box
 vagrant up
 ```
 
