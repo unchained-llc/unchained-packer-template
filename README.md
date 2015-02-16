@@ -7,8 +7,8 @@ CentOS 6.6 / 7.0 x64 + Chef + VirtualBox / VMWare for Packer Template
 
 ```
 cd centos6 or centos7
-packer validate [ CentOS_6.6.json | CentOS_7.0.json ]
-VERSION=v20150213 packer build [ -only virtualbox-iso | -only vmware-iso ]  [ CentOS_6.6.json | CentOS_7.0.json ]
+packer validate [ CentOS_6.json | CentOS_7.json ]
+VERSION=v20150213 packer build [ -only virtualbox-iso | -only vmware-iso ]  [ CentOS_6.json | CentOS_7.json ]
 ```
 
 ## Add Vagrant Box
