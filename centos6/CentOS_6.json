@@ -28,13 +28,14 @@
       "iso_checksum_type": "sha256",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
+      "ssh_wait_timeout": "10000s",
       "boot_command": [
         "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait>"
       ],
       "disk_size": "100000",
       "hard_drive_interface": "sata",
       "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
-      "guest_additions_sha256": "9f52e186d6c9407b2676d4b2ed1cdf96940ec129cc2bd92e54b24526271a9733",
+      "guest_additions_sha256": "7b61f523db7ba75aebc4c7bb0cae2da92674fa72299e4a006c5c67517f7d786b",
       "guest_os_type": "RedHat_64",
       "headless": "true",
       "http_directory": "http",
@@ -51,6 +52,7 @@
       "iso_checksum_type": "sha256",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
+      "ssh_wait_timeout": "10000s",
       "disk_size": "100000",
       "tools_upload_flavor": "linux",
       "guest_os_type": "centos-64",
