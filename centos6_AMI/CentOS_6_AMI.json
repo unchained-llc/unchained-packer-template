@@ -9,7 +9,6 @@
     "scripts": [
       "scripts/update.sh",
       "scripts/cloudinit.sh",
-      "scripts/chef.sh",
       "scripts/cleanup.sh"
     ]
   }],
