@@ -17,9 +17,10 @@
     "access_key": "{{user `aws_access_key`}}",
     "secret_key": "{{user `aws_secret_key`}}",
     "region": "ap-northeast-1",
-    "source_ami": "ami-13614b12",
+    "source_ami": "ami-1255b321",
     "instance_type": "c4.xlarge",
-    "ssh_username": "root",
+    "ssh_username": "centos",
+    "ssh_pty": true,
     "ami_name": "CentOS6 Official with Update plus Cloudinit {{timestamp}}"
   }]
 }
