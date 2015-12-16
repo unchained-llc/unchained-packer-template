@@ -15,10 +15,10 @@ VERSION=v20151209 packer build [ -only virtualbox-iso | -only vmware-iso ]  [ Ce
 
 ```
 box add BOXNAME UNCHAINED-CentOS-6-x86_64-v20151209-virtualbox.box
-box add BOXNAME UNCHAINED-CentOS-7-x86_64-v20151209-virtualbox.box
+box add BOXNAME UNCHAINED-CentOS-7-x86_64-v20151217-virtualbox.box
 or
 box add BOXNAME UNCHAINED-CentOS-6-x86_64-v20151209-vmware.box
-box add BOXNAME UNCHAINED-CentOS-7-x86_64-v20151209-vmware.box
+box add BOXNAME UNCHAINED-CentOS-7-x86_64-v20151217-vmware.box
 ```
 
 ## Vagrant Cloud
@@ -39,10 +39,10 @@ vagrant up
 mkdir centos
 cd centos
 vagrant init UNCHAINED-CentOS-6-x86_64-v20151209 http://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6-x86_64-v20151209-virtualbox.box
-vagrant init UNCHAINED-CentOS-7-x86_64-v20151209 http://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7-x86_64-v20151209-virtualbox.box
+vagrant init UNCHAINED-CentOS-7-x86_64-v20151217 http://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7-x86_64-v20151217-virtualbox.box
 or
 vagrant init UNCHAINED-CentOS-6-x86_64-v20151209 http://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6-x86_64-v20151209-vmware.box
-vagrant init UNCHAINED-CentOS-7-x86_64-v20151209 http://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7-x86_64-v20151209-vmware.box
+vagrant init UNCHAINED-CentOS-7-x86_64-v20151217 http://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7-x86_64-v20151217-vmware.box
 vagrant up
 ```
 
