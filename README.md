@@ -8,17 +8,17 @@ CentOS 6 / 7 x64 + VirtualBox / VMWare for Packer Template
 ```
 cd centos6 or centos7
 packer validate [ CentOS_6.json | CentOS_7.json ]
-VERSION=v20161211 packer build [ -only virtualbox-iso | -only vmware-iso ]  [ CentOS_6.json | CentOS_7.json ]
+VERSION=v20161222 packer build [ -only virtualbox-iso | -only vmware-iso ]  [ CentOS_6.json | CentOS_7.json ]
 ```
 
 ## Add Vagrant Box
 
 ```
-vagrant box add BOXNAME UNCHAINED-CentOS-6-x86_64-v20161130-virtualbox.box
-vagrant box add BOXNAME UNCHAINED-CentOS-7-x86_64-v20161130-virtualbox.box
+vagrant box add BOXNAME UNCHAINED-CentOS-6-x86_64-v20161222-virtualbox.box
+vagrant box add BOXNAME UNCHAINED-CentOS-7-x86_64-v20161222-virtualbox.box
 or
-vagrant box add BOXNAME UNCHAINED-CentOS-6-x86_64-v20161130-vmware.box
-vagrant box add BOXNAME UNCHAINED-CentOS-7-x86_64-v20161130-vmware.box
+vagrant box add BOXNAME UNCHAINED-CentOS-6-x86_64-v20161222-vmware.box
+vagrant box add BOXNAME UNCHAINED-CentOS-7-x86_64-v20161222-vmware.box
 ```
 
 ## Atlas a.k.a Vagrant Cloud
@@ -38,11 +38,11 @@ vagrant up
 ```
 mkdir centos
 cd centos
-vagrant init UNCHAINED-CentOS-6-x86_64-v20161211 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6-x86_64-v20161130-virtualbox.box
-vagrant init UNCHAINED-CentOS-7-x86_64-v20161211 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7-x86_64-v20161130-virtualbox.box
+vagrant init UNCHAINED-CentOS-6-x86_64-v20161222 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6-x86_64-v20161222-virtualbox.box
+vagrant init UNCHAINED-CentOS-7-x86_64-v20161222 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7-x86_64-v20161222-virtualbox.box
 or
-vagrant init UNCHAINED-CentOS-6-x86_64-v20161211 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6-x86_64-v20161130-vmware.box
-vagrant init UNCHAINED-CentOS-7-x86_64-v20161211 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7-x86_64-v20161130-vmware.box
+vagrant init UNCHAINED-CentOS-6-x86_64-v20161222 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6-x86_64-v20161222-vmware.box
+vagrant init UNCHAINED-CentOS-7-x86_64-v20161222 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7-x86_64-v20161222-vmware.box
 vagrant up
 ```
 
@@ -65,21 +65,11 @@ vagrant up
 
 ## Known Issues
 
-[mitchellh/vagrant: Authentication failure after inserting new key with Vagrant 1.8.5.](https://github.com/mitchellh/vagrant/issues/7610)
+[VMWare tools fails to Compile on Centos 7.3 (1611)](https://communities.vmware.com/message/2637447?tstart=0)
 
-fix ex.
-```diff
---- vagrant-original/plugins/guests/linux/cap/public_key.rb     2016-07-19 12:06:56.575045974 -0500
-+++ vagrant/plugins/guests/linux/cap/public_key.rb      2016-07-19 12:07:34.303376009 -0500
-@@ -54,6 +54,7 @@
-             if test -f ~/.ssh/authorized_keys; then
-               grep -v -x -f '#{remote_path}' ~/.ssh/authorized_keys > ~/.ssh/authorized_keys.tmp
-               mv ~/.ssh/authorized_keys.tmp ~/.ssh/authorized_keys
-+              chmod 0600 ~/.ssh/authorized_keys
-             fi
+1. download VMware Tools 10.1.0 or Higher
+1. extract it
+1. copy vmtools/linux.iso centos7/
+1. build
 
-             rm -f '#{remote_path}'
-end
-```
-
-Enjoy!!
+refs #4

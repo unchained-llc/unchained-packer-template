@@ -4,6 +4,12 @@
   },
   "provisioners": [
     {
+      "type": "file",
+      "source": "linux.iso",
+      "only": ["vmware-iso"],
+      "destination": "/tmp/linux.iso"
+    },
+    {
       "type": "shell",
       "execute_command": "sudo {{.Vars}} sh {{.Path}}",
       "scripts": [
@@ -23,8 +29,8 @@
   "builders": [
     {
       "type": "virtualbox-iso",
-      "iso_url": "http://ftp.iij.ad.jp/pub/linux/centos/7/isos/x86_64/CentOS-7-x86_64-NetInstall-1511.iso",
-      "iso_checksum": "9ed9ffb5d89ab8cca834afce354daa70a21dcb410f58287d6316259ff89758f5",
+      "iso_url": "http://ftp.iij.ad.jp/pub/linux/centos/7/isos/x86_64/CentOS-7-x86_64-NetInstall-1611.iso",
+      "iso_checksum": "f2f7367deb90a25822947660c71638333ca0eceeabecc2d631be6cd508c24494",
       "iso_checksum_type": "sha256",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
@@ -47,8 +53,8 @@
     },
     {
       "type": "vmware-iso",
-      "iso_url": "http://ftp.iij.ad.jp/pub/linux/centos/7/isos/x86_64/CentOS-7-x86_64-NetInstall-1511.iso",
-      "iso_checksum": "9ed9ffb5d89ab8cca834afce354daa70a21dcb410f58287d6316259ff89758f5",
+      "iso_url": "http://ftp.iij.ad.jp/pub/linux/centos/7/isos/x86_64/CentOS-7-x86_64-NetInstall-1611.iso",
+      "iso_checksum": "f2f7367deb90a25822947660c71638333ca0eceeabecc2d631be6cd508c24494",
       "iso_checksum_type": "sha256",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
