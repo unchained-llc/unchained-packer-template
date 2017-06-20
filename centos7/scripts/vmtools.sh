@@ -9,13 +9,12 @@ rm -rf /home/vagrant/VBoxGuestAdditions_*.iso
 fi
 
 if [[ $PACKER_BUILDER_TYPE =~ vmware ]]; then
-mkdir /mnt/cdrom
-mount -o loop /tmp/linux.iso /mnt/cdrom
-tar zxf /mnt/cdrom/VMwareTools-*.tar.gz -C /tmp
-cd /tmp/vmware-tools-distrib
 yum -y install net-tools
-/tmp/vmware-tools-distrib/vmware-install.pl -d -f
-umount /mnt/cdrom
+mount -o loop /home/vagrant/linux.iso /mnt
+cd /tmp
+tar zxf /mnt/VMwareTools-*.tar.gz
+umount /mnt
+/tmp/vmware-tools-distrib/vmware-install.pl --default
 rm -rf /tmp/vmware-tools-distrib
-rm -rf /tmp/linux.iso
+rm -rf /home/vagrant/linux.iso
 fi

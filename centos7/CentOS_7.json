@@ -4,12 +4,6 @@
   },
   "provisioners": [
     {
-      "type": "file",
-      "source": "linux.iso",
-      "only": ["vmware-iso"],
-      "destination": "/tmp/linux.iso"
-    },
-    {
       "type": "shell",
       "execute_command": "sudo {{.Vars}} sh {{.Path}}",
       "scripts": [
@@ -65,13 +59,13 @@
       "headless": "true",
       "shutdown_command": "sudo /sbin/halt -p",
       "http_directory": "http",
+      "vmx_remove_ethernet_interfaces": "true",
       "boot_command": [
         "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait>"
       ],
       "vmx_data": {
         "memsize": "512",
-        "numvcpus": "1",
-        "vhv.enable": "TRUE"
+        "numvcpus": "1"
       }
     }
   ]
