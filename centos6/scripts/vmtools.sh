@@ -1,4 +1,5 @@
 if [[ $PACKER_BUILDER_TYPE =~ virtualbox ]]; then
+yum -y install bzip2 net-tools
 VBOX_VERSION=$(cat /home/vagrant/.vbox_version)
 cd /tmp
 mount -o loop /home/vagrant/VBoxGuestAdditions_$VBOX_VERSION.iso /mnt
@@ -8,12 +9,7 @@ rm -rf /home/vagrant/VBoxGuestAdditions_*.iso
 fi
 
 if [[ $PACKER_BUILDER_TYPE =~ vmware ]]; then
-yum -y install fuse fuse-libs
-mount -o loop /home/vagrant/linux.iso /mnt
-cd /tmp
-tar zxf /mnt/VMwareTools-*.tar.gz
-umount /mnt
-/tmp/vmware-tools-distrib/vmware-install.pl --default
-rm -rf /tmp/vmware-tools-distrib
-rm -rf /home/vagrant/linux.iso
+yum -y install net-tools
+yum -y install epel-release
+yum -y install open-vm-tools
 fi
