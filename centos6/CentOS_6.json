@@ -23,8 +23,8 @@
   "builders": [
     {
       "type": "virtualbox-iso",
-      "iso_url": "http://ftp.iij.ad.jp/pub/linux/centos/6/isos/x86_64/CentOS-6.9-x86_64-netinstall.iso",
-      "iso_checksum": "6b2cbec908708476389b143841a8e73462506de0744bda8b4192d3655d5bb8d2",
+      "iso_url": "http://ftp.iij.ad.jp/pub/linux/centos/6/isos/x86_64/CentOS-6.10-x86_64-netinstall.iso",
+      "iso_checksum": "56f7b078a3b443095ba006cdc85319c691251cda98c5d73d12ef6db7aff6b4c1",
       "iso_checksum_type": "sha256",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
@@ -35,7 +35,7 @@
       "disk_size": "100000",
       "hard_drive_interface": "sata",
       "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
-      "guest_additions_sha256": "68ddc870c9b9faf61850a69155388e5f3de0189f2d19ad4131e3c71aff2d26b0",
+      "guest_additions_sha256": "f98b6ad7093ee0b27d26dea565b197a5f33fdac93c4b67e73824ce889d6c964c",
       "guest_os_type": "RedHat_64",
       "headless": "true",
       "http_directory": "http",
@@ -47,8 +47,8 @@
     },
     {
       "type": "vmware-iso",
-      "iso_url": "http://ftp.iij.ad.jp/pub/linux/centos/6/isos/x86_64/CentOS-6.9-x86_64-netinstall.iso",
-      "iso_checksum": "6b2cbec908708476389b143841a8e73462506de0744bda8b4192d3655d5bb8d2",
+      "iso_url": "http://ftp.iij.ad.jp/pub/linux/centos/6/isos/x86_64/CentOS-6.10-x86_64-netinstall.iso",
+      "iso_checksum": "56f7b078a3b443095ba006cdc85319c691251cda98c5d73d12ef6db7aff6b4c1",
       "iso_checksum_type": "sha256",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
