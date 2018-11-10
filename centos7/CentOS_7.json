@@ -35,7 +35,7 @@
       "disk_size": "100000",
       "hard_drive_interface": "sata",
       "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
-      "guest_additions_sha256": "f98b6ad7093ee0b27d26dea565b197a5f33fdac93c4b67e73824ce889d6c964c",
+      "guest_additions_sha256": "e51e33500a265b5c2d7bb2d03d32208df880523dfcb1e2dde2c78a0e0daa0603",
       "guest_os_type": "RedHat_64",
       "headless": "true",
       "http_directory": "http",

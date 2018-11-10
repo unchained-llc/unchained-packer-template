@@ -14,11 +14,11 @@ VERSION=v20180718 packer build [ -only virtualbox-iso | -only vmware-iso ]  [ Ce
 ## Add Vagrant Box
 
 ```
-vagrant box add BOXNAME UNCHAINED-CentOS-6-x86_64-v20181003-virtualbox.box
-vagrant box add BOXNAME UNCHAINED-CentOS-7-x86_64-v20181003-virtualbox.box
+vagrant box add BOXNAME UNCHAINED-CentOS-6-x86_64-v20181110-virtualbox.box
+vagrant box add BOXNAME UNCHAINED-CentOS-7-x86_64-v20181110-virtualbox.box
 or
-vagrant box add BOXNAME UNCHAINED-CentOS-6-x86_64-v20181003-vmware.box
-vagrant box add BOXNAME UNCHAINED-CentOS-7-x86_64-v20181003-vmware.box
+vagrant box add BOXNAME UNCHAINED-CentOS-6-x86_64-v20181110-vmware.box
+vagrant box add BOXNAME UNCHAINED-CentOS-7-x86_64-v20181110-vmware.box
 ```
 
 ## Atlas a.k.a Vagrant Cloud
@@ -38,11 +38,11 @@ vagrant up
 ```
 mkdir centos
 cd centos
-vagrant init UNCHAINED-CentOS-6-x86_64-v20180718 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6-x86_64-v20181003-virtualbox.box
-vagrant init UNCHAINED-CentOS-7-x86_64-v20180718 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7-x86_64-v20181003-virtualbox.box
+vagrant init UNCHAINED-CentOS-6-x86_64-v20180718 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6-x86_64-v20181110-virtualbox.box
+vagrant init UNCHAINED-CentOS-7-x86_64-v20180718 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7-x86_64-v20181110-virtualbox.box
 or
-vagrant init UNCHAINED-CentOS-6-x86_64-v20180718 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6-x86_64-v20181003-vmware.box
-vagrant init UNCHAINED-CentOS-7-x86_64-v20180718 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7-x86_64-v20181003-vmware.box
+vagrant init UNCHAINED-CentOS-6-x86_64-v20180718 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6-x86_64-v20181110-vmware.box
+vagrant init UNCHAINED-CentOS-7-x86_64-v20180718 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7-x86_64-v20181110-vmware.box
 vagrant up
 ```
 
