@@ -8,17 +8,17 @@ CentOS 6 / 7 x64 + VirtualBox / VMWare for Packer Template
 ```
 cd centos6 or centos7
 packer validate [ CentOS_6.json | CentOS_7.json ]
-VERSION=v20190717 packer build [ -only virtualbox-iso | -only vmware-iso ]  [ CentOS_6.json | CentOS_7.json ]
+VERSION=v20190910 packer build [ -only virtualbox-iso | -only vmware-iso ]  [ CentOS_6.json | CentOS_7.json ]
 ```
 
 ## Add Vagrant Box
 
 ```
-vagrant box add BOXNAME UNCHAINED-CentOS-6-x86_64-v20190717-virtualbox.box
-vagrant box add BOXNAME UNCHAINED-CentOS-7-x86_64-v20190717-virtualbox.box
+vagrant box add BOXNAME UNCHAINED-CentOS-6-x86_64-v20190910-virtualbox.box
+vagrant box add BOXNAME UNCHAINED-CentOS-7-x86_64-v20190910-virtualbox.box
 or
-vagrant box add BOXNAME UNCHAINED-CentOS-6-x86_64-v20190717-vmware.box
-vagrant box add BOXNAME UNCHAINED-CentOS-7-x86_64-v20190717-vmware.box
+vagrant box add BOXNAME UNCHAINED-CentOS-6-x86_64-v20190910-vmware.box
+vagrant box add BOXNAME UNCHAINED-CentOS-7-x86_64-v20190910-vmware.box
 ```
 
 ## Atlas a.k.a Vagrant Cloud
@@ -38,11 +38,11 @@ vagrant up
 ```
 mkdir centos
 cd centos
-vagrant init UNCHAINED-CentOS-6-x86_64-v20190717 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6-x86_64-v20190717-virtualbox.box
-vagrant init UNCHAINED-CentOS-7-x86_64-v20190717 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7-x86_64-v20190717-virtualbox.box
+vagrant init UNCHAINED-CentOS-6-x86_64-v20190910 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6-x86_64-v20190910-virtualbox.box
+vagrant init UNCHAINED-CentOS-7-x86_64-v20190910 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7-x86_64-v20190910-virtualbox.box
 or
-vagrant init UNCHAINED-CentOS-6-x86_64-v20190717 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6-x86_64-v20190717-vmware.box
-vagrant init UNCHAINED-CentOS-7-x86_64-v20190717 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7-x86_64-v20190717-vmware.box
+vagrant init UNCHAINED-CentOS-6-x86_64-v20190910 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6-x86_64-v20190910-vmware.box
+vagrant init UNCHAINED-CentOS-7-x86_64-v20190910 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7-x86_64-v20190910-vmware.box
 vagrant up
 ```
 
@@ -62,14 +62,3 @@ vagrant up
 ```
 vagrant up
 ```
-
-## Known Issues
-
-[VMWare tools fails to Compile on Centos 7.3 (1611)](https://communities.vmware.com/message/2637447?tstart=0)
-
-1. download VMware Tools 10.1.0 or Higher
-1. extract it
-1. copy vmtools/linux.iso centos7/
-1. build
-
-refs #4
