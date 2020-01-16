@@ -8,19 +8,19 @@ CentOS 6 / 7 / 8 x64 + VirtualBox / VMWare for Packer Template
 ```
 cd centos6 or centos7 or centos8
 packer validate [ CentOS_6.json | CentOS_7.json | CentOS_8.json ]
-VERSION=v20191212 packer build [ -only virtualbox-iso | -only vmware-iso ]  [ CentOS_6.json | CentOS_7.json | CentOS_8.json ]
+VERSION=v20200116 packer build [ -only virtualbox-iso | -only vmware-iso ]  [ CentOS_6.json | CentOS_7.json | CentOS_8.json ]
 ```
 
 ## Add Vagrant Box
 
 ```
-vagrant box add BOXNAME UNCHAINED-CentOS-6-x86_64-v20191212-virtualbox.box
-vagrant box add BOXNAME UNCHAINED-CentOS-7-x86_64-v20191212-virtualbox.box
-vagrant box add BOXNAME UNCHAINED-CentOS-6-x86_64-v20191212-virtualbox.box
+vagrant box add BOXNAME UNCHAINED-CentOS-6-x86_64-v20200116-virtualbox.box
+vagrant box add BOXNAME UNCHAINED-CentOS-7-x86_64-v20200116-virtualbox.box
+vagrant box add BOXNAME UNCHAINED-CentOS-6-x86_64-v20200116-virtualbox.box
 or
-vagrant box add BOXNAME UNCHAINED-CentOS-6-x86_64-v20191212-vmware.box
-vagrant box add BOXNAME UNCHAINED-CentOS-7-x86_64-v20191212-vmware.box
-vagrant box add BOXNAME UNCHAINED-CentOS-6-x86_64-v20191212-vmware.box
+vagrant box add BOXNAME UNCHAINED-CentOS-6-x86_64-v20200116-vmware.box
+vagrant box add BOXNAME UNCHAINED-CentOS-7-x86_64-v20200116-vmware.box
+vagrant box add BOXNAME UNCHAINED-CentOS-6-x86_64-v20200116-vmware.box
 ```
 
 ## Atlas a.k.a Vagrant Cloud
@@ -44,13 +44,13 @@ vagrant up
 ```
 mkdir centos
 cd centos
-vagrant init UNCHAINED-CentOS-6-x86_64-v20191212 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6-x86_64-v20191212-virtualbox.box
-vagrant init UNCHAINED-CentOS-7-x86_64-v20191212 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7-x86_64-v20191212-virtualbox.box
-vagrant init UNCHAINED-CentOS-6-x86_64-v20191212 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6-x86_64-v20191212-virtualbox.box
+vagrant init UNCHAINED-CentOS-6-x86_64-v20200116 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6-x86_64-v20200116-virtualbox.box
+vagrant init UNCHAINED-CentOS-7-x86_64-v20200116 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7-x86_64-v20200116-virtualbox.box
+vagrant init UNCHAINED-CentOS-6-x86_64-v20200116 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6-x86_64-v20200116-virtualbox.box
 or
-vagrant init UNCHAINED-CentOS-6-x86_64-v20191212 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6-x86_64-v20191212-vmware.box
-vagrant init UNCHAINED-CentOS-7-x86_64-v20191212 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7-x86_64-v20191212-vmware.box
-vagrant init UNCHAINED-CentOS-6-x86_64-v20191212 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7-x86_64-v20191212-vmware.box
+vagrant init UNCHAINED-CentOS-6-x86_64-v20200116 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6-x86_64-v20200116-vmware.box
+vagrant init UNCHAINED-CentOS-7-x86_64-v20200116 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7-x86_64-v20200116-vmware.box
+vagrant init UNCHAINED-CentOS-6-x86_64-v20200116 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7-x86_64-v20200116-vmware.box
 vagrant up
 ```
 
