@@ -1,0 +1,69 @@
+{
+  "variables": {
+    "version": "{{env `VERSION`}}"
+  },
+  "provisioners": [
+    {
+      "type": "shell",
+      "execute_command": "sudo {{.Vars}} sh {{.Path}}",
+      "scripts": [
+        "scripts/vagrant.sh",
+        "scripts/vmtools.sh",
+        "scripts/cleanup.sh"
+      ]
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "vagrant",
+      "output": "UNCHAINED-FreeBSD-12-x86_64-{{user `version`}}-{{.Provider}}.box",
+      "vagrantfile_template": "Vagrantfile.rb"
+    }
+  ],
+  "builders": [
+    {
+      "type": "virtualbox-iso",
+      "iso_url": "http://ftp.iij.ad.jp/pub/FreeBSD/releases/ISO-IMAGES/12.1/FreeBSD-12.1-RELEASE-amd64-bootonly.iso",
+      "iso_checksum": "2c2ff1dba6b0e169d7e1a7181473a5869c71ce4cd3e76e512ef12bff43d72b4e",
+      "iso_checksum_type": "sha256",
+      "ssh_username": "vagrant",
+      "ssh_password": "vagrant",
+      "ssh_timeout": "10m",
+      "boot_command": [
+        "<enter><wait5><wait10><tab><enter><wait>dhclient -l /tmp/dhclient.lease.em0 em0 && fetch -o /tmp/install.sh http://{{.HTTPIP}}:{{.HTTPPort}}/install.sh && sh /tmp/install.sh && reboot<enter>"
+      ],
+      "disk_size": "100000",
+      "hard_drive_interface": "scsi",
+      "guest_os_type": "FreeBSD_64",
+      "headless": "true",
+      "http_directory": "http",
+      "shutdown_command": "sudo /sbin/halt -p",
+      "vboxmanage": [
+        [ "modifyvm", "{{.Name}}", "--memory", "1024" ],
+        [ "modifyvm", "{{.Name}}", "--cpus", "1" ]
+      ]
+    },
+    {
+      "type": "vmware-iso",
+      "iso_url": "http://ftp.iij.ad.jp/pub/FreeBSD/releases/ISO-IMAGES/12.1/FreeBSD-12.1-RELEASE-amd64-bootonly.iso",
+      "iso_checksum": "2c2ff1dba6b0e169d7e1a7181473a5869c71ce4cd3e76e512ef12bff43d72b4e",
+      "iso_checksum_type": "sha256",
+      "ssh_username": "vagrant",
+      "ssh_password": "vagrant",
+      "ssh_timeout": "10m",
+      "disk_size": "100000",
+      "guest_os_type": "freeBSD-64",
+      "headless": "true",
+      "shutdown_command": "sudo /sbin/halt -p",
+      "http_directory": "http",
+      "vmx_remove_ethernet_interfaces": "true",
+      "boot_command": [
+        "<enter><wait5><wait10><tab><enter><wait>dhclient -l /tmp/dhclient.lease.em0 em0 && fetch -o /tmp/install.sh http://{{.HTTPIP}}:{{.HTTPPort}}/install.sh && sh /tmp/install.sh && reboot<enter>"
+      ],
+      "vmx_data": {
+        "memsize": "1024",
+        "numvcpus": "1"
+      }
+    }
+  ]
+}
