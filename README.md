@@ -46,11 +46,11 @@ mkdir centos
 cd centos
 vagrant init UNCHAINED-CentOS-6-x86_64-v20200116 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6-x86_64-v20200116-virtualbox.box
 vagrant init UNCHAINED-CentOS-7-x86_64-v20200116 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7-x86_64-v20200116-virtualbox.box
-vagrant init UNCHAINED-CentOS-6-x86_64-v20200116 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6-x86_64-v20200116-virtualbox.box
+vagrant init UNCHAINED-CentOS-8-x86_64-v20200116 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-8-x86_64-v20200116-virtualbox.box
 or
 vagrant init UNCHAINED-CentOS-6-x86_64-v20200116 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6-x86_64-v20200116-vmware.box
 vagrant init UNCHAINED-CentOS-7-x86_64-v20200116 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7-x86_64-v20200116-vmware.box
-vagrant init UNCHAINED-CentOS-6-x86_64-v20200116 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7-x86_64-v20200116-vmware.box
+vagrant init UNCHAINED-CentOS-8-x86_64-v20200116 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-6-x86_64-v20200116-vmware.box
 vagrant up
 ```
 
