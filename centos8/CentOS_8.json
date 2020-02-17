@@ -28,7 +28,7 @@
       "iso_checksum_type": "sha256",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
-      "ssh_wait_timeout": "10m",
+      "ssh_timeout": "10m",
       "boot_command": [
         "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait>"
       ],
@@ -51,7 +51,7 @@
       "iso_checksum_type": "sha256",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
-      "ssh_wait_timeout": "10m",
+      "ssh_timeout": "10m",
       "disk_size": "100000",
       "tools_upload_flavor": "linux",
       "guest_os_type": "centos-64",
