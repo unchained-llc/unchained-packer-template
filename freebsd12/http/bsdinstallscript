@@ -27,6 +27,9 @@ EOL
 echo "vagrant" | pw useradd vagrant -h 0 -G wheel -m
 echo "vagrant" | pw usermod root -h 0
 
+
+env PAGER=/bin/cat freebsd-update --not-running-from-cron fetch install
+
 pkg install -y sudo curl
 mkdir -p /usr/local/etc/sudoers.d
 cat <<EOS > /usr/local/etc/sudoers.d/vagrant
