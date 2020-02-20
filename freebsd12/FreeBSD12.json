@@ -30,7 +30,7 @@
       "ssh_password": "vagrant",
       "ssh_timeout": "10m",
       "boot_command": [
-        "<enter><wait5><wait10><tab><enter><wait>dhclient -l /tmp/dhclient.lease.em0 em0 && fetch -o /tmp/fetch.sh http://{{.HTTPIP}}:{{.HTTPPort}}/fetch.sh && sh /tmp/fetch.sh && fetch -o /tmp/bsdinstallscript http://{{.HTTPIP}}:{{.HTTPPort}}/bsdinstallscript && bsdinstall script /tmp/bsdinstallscript<enter>"
+        "<enter><wait5><wait10><tab><enter><wait>mkdir /tmp/etc && mount -t unionfs /tmp/etc /etc && rm /etc/resolv.conf && dhclient em0 && fetch -o /tmp/fetch.sh http://{{.HTTPIP}}:{{.HTTPPort}}/fetch.sh && sh /tmp/fetch.sh && fetch -o /tmp/bsdinstallscript http://{{.HTTPIP}}:{{.HTTPPort}}/bsdinstallscript && bsdinstall script /tmp/bsdinstallscript<enter>"
       ],
       "disk_size": "100000",
       "hard_drive_interface": "scsi",
@@ -58,7 +58,7 @@
       "http_directory": "http",
       "vmx_remove_ethernet_interfaces": "true",
       "boot_command": [
-        "<enter><wait5><wait10><tab><enter><wait>dhclient -l /tmp/dhclient.lease.em0 em0 && fetch -o /tmp/fetch.sh http://{{.HTTPIP}}:{{.HTTPPort}}/fetch.sh && sh /tmp/fetch.sh && fetch -o /tmp/bsdinstallscript http://{{.HTTPIP}}:{{.HTTPPort}}/bsdinstallscript && bsdinstall script /tmp/bsdinstallscript<enter>"
+        "<enter><wait5><wait10><tab><enter><wait>mkdir /tmp/etc && mount -t unionfs /tmp/etc /etc && rm /etc/resolv.conf && dhclient em0 && fetch -o /tmp/fetch.sh http://{{.HTTPIP}}:{{.HTTPPort}}/fetch.sh && sh /tmp/fetch.sh && fetch -o /tmp/bsdinstallscript http://{{.HTTPIP}}:{{.HTTPPort}}/bsdinstallscript && bsdinstall script /tmp/bsdinstallscript<enter>"
       ],
       "vmx_data": {
         "memsize": "1024",

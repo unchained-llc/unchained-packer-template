@@ -27,7 +27,6 @@ EOL
 echo "vagrant" | pw useradd vagrant -h 0 -G wheel -m
 echo "vagrant" | pw usermod root -h 0
 
-dhclient -l /tmp/dhclient.lease.em0 em0
 pkg install -y sudo curl
 mkdir -p /usr/local/etc/sudoers.d
 cat <<EOS > /usr/local/etc/sudoers.d/vagrant
