@@ -1,4 +1,4 @@
-export DISTRIBUTIONS="base.txz lib32.txz kernel.txz"
+export DISTRIBUTIONS="base.txz kernel.txz"
 export BSDINSTALL_DISTDIR="/media"
 export ZFSBOOT_DISKS="da0"
 export nonInteractive="YES"
