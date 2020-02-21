@@ -9,7 +9,8 @@
       "scripts": [
         "scripts/vagrant.sh",
         "scripts/vmtools.sh",
-        "scripts/cleanup.sh"
+        "scripts/cleanup.sh",
+        "scripts/zerodisk.sh"
       ]
     }
   ],
