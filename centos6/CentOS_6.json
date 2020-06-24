@@ -24,8 +24,7 @@
     {
       "type": "virtualbox-iso",
       "iso_url": "http://ftp.iij.ad.jp/pub/linux/centos/6/isos/x86_64/CentOS-6.10-x86_64-netinstall.iso",
-      "iso_checksum": "56f7b078a3b443095ba006cdc85319c691251cda98c5d73d12ef6db7aff6b4c1",
-      "iso_checksum_type": "sha256",
+      "iso_checksum": "sha256:56f7b078a3b443095ba006cdc85319c691251cda98c5d73d12ef6db7aff6b4c1",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_timeout": "10m",
@@ -47,8 +46,7 @@
     {
       "type": "vmware-iso",
       "iso_url": "http://ftp.iij.ad.jp/pub/linux/centos/6/isos/x86_64/CentOS-6.10-x86_64-netinstall.iso",
-      "iso_checksum": "56f7b078a3b443095ba006cdc85319c691251cda98c5d73d12ef6db7aff6b4c1",
-      "iso_checksum_type": "sha256",
+      "iso_checksum": "sha256:56f7b078a3b443095ba006cdc85319c691251cda98c5d73d12ef6db7aff6b4c1",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_timeout": "10m",

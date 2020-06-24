@@ -23,9 +23,8 @@
   "builders": [
     {
       "type": "virtualbox-iso",
-      "iso_url": "http://ftp.iij.ad.jp/pub/linux/centos/8/isos/x86_64/CentOS-8.1.1911-x86_64-boot.iso",
-      "iso_checksum": "7fea13202bf2f26989df4175aace8fdc16e1137f7961c33512cbfad844008948",
-      "iso_checksum_type": "sha256",
+      "iso_url": "http://ftp.iij.ad.jp/pub/linux/centos/8/isos/x86_64/CentOS-8.2.2004-x86_64-boot.iso",
+      "iso_checksum": "sha256:c67876a5602faa17f68b40ccf2628799b87454aa67700f0f57eec15c6ccdd98c",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_timeout": "10m",
@@ -46,9 +45,8 @@
     },
     {
       "type": "vmware-iso",
-      "iso_url": "http://ftp.iij.ad.jp/pub/linux/centos/8/isos/x86_64/CentOS-8.1.1911-x86_64-boot.iso",
-      "iso_checksum": "7fea13202bf2f26989df4175aace8fdc16e1137f7961c33512cbfad844008948",
-      "iso_checksum_type": "sha256",
+      "iso_url": "http://ftp.iij.ad.jp/pub/linux/centos/8/isos/x86_64/CentOS-8.2.2004-x86_64-boot.iso",
+      "iso_checksum": "sha256:c67876a5602faa17f68b40ccf2628799b87454aa67700f0f57eec15c6ccdd98c",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_timeout": "10m",
