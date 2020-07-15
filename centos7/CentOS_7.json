@@ -31,17 +31,15 @@
       "boot_command": [
         "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait>"
       ],
+      "shutdown_command": "sudo /sbin/halt -p",
       "disk_size": "100000",
-      "hard_drive_interface": "scsi",
+      "hard_drive_interface": "sata",
       "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
       "guest_os_type": "RedHat_64",
       "headless": "true",
       "http_directory": "http",
-      "shutdown_command": "sudo /sbin/halt -p",
-      "vboxmanage": [
-        [ "modifyvm", "{{.Name}}", "--memory", "1024" ],
-        [ "modifyvm", "{{.Name}}", "--cpus", "1" ]
-      ]
+      "cpus": 2,
+      "memory": 1024
     },
     {
       "type": "vmware-iso",
@@ -50,20 +48,18 @@
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_timeout": "10m",
+      "boot_command": [
+        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait>"
+      ],
+      "shutdown_command": "sudo /sbin/halt -p",
       "disk_size": "100000",
       "tools_upload_flavor": "linux",
       "guest_os_type": "centos-64",
       "headless": "true",
-      "shutdown_command": "sudo /sbin/halt -p",
       "http_directory": "http",
       "vmx_remove_ethernet_interfaces": "true",
-      "boot_command": [
-        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait>"
-      ],
-      "vmx_data": {
-        "memsize": "1024",
-        "numvcpus": "1"
-      }
+      "cpus": 2,
+      "memory": 1024
     }
   ]
 }

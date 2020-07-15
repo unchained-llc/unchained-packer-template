@@ -32,16 +32,14 @@
       "boot_command": [
         "<enter><wait5><wait10><tab><enter><wait>mkdir /tmp/etc && mount -t unionfs /tmp/etc /etc && rm /etc/resolv.conf && dhclient em0 && fetch -o /tmp/fetch.sh http://{{.HTTPIP}}:{{.HTTPPort}}/fetch.sh && sh /tmp/fetch.sh && fetch -o /tmp/bsdinstallscript http://{{.HTTPIP}}:{{.HTTPPort}}/bsdinstallscript && bsdinstall script /tmp/bsdinstallscript<enter>"
       ],
+      "shutdown_command": "sudo /sbin/halt -p",
       "disk_size": "100000",
-      "hard_drive_interface": "scsi",
+      "hard_drive_interface": "sata",
       "guest_os_type": "FreeBSD_64",
       "headless": "true",
       "http_directory": "http",
-      "shutdown_command": "sudo /sbin/halt -p",
-      "vboxmanage": [
-        [ "modifyvm", "{{.Name}}", "--memory", "1024" ],
-        [ "modifyvm", "{{.Name}}", "--cpus", "1" ]
-      ]
+      "cpus": 2,
+      "memory": 1024
     },
     {
       "type": "vmware-iso",
@@ -50,19 +48,17 @@
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_timeout": "10m",
-      "disk_size": "100000",
-      "guest_os_type": "freeBSD-64",
-      "headless": "true",
-      "shutdown_command": "sudo /sbin/halt -p",
-      "http_directory": "http",
-      "vmx_remove_ethernet_interfaces": "true",
       "boot_command": [
         "<enter><wait5><wait10><tab><enter><wait>mkdir /tmp/etc && mount -t unionfs /tmp/etc /etc && rm /etc/resolv.conf && dhclient em0 && fetch -o /tmp/fetch.sh http://{{.HTTPIP}}:{{.HTTPPort}}/fetch.sh && sh /tmp/fetch.sh && fetch -o /tmp/bsdinstallscript http://{{.HTTPIP}}:{{.HTTPPort}}/bsdinstallscript && bsdinstall script /tmp/bsdinstallscript<enter>"
       ],
-      "vmx_data": {
-        "memsize": "1024",
-        "numvcpus": "1"
-      }
+      "shutdown_command": "sudo /sbin/halt -p",
+      "disk_size": "100000",
+      "guest_os_type": "freeBSD-64",
+      "headless": "true",
+      "http_directory": "http",
+      "vmx_remove_ethernet_interfaces": "true",
+      "cpus": 2,
+      "memory": 1024
     }
   ]
 }
