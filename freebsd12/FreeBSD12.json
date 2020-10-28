@@ -24,8 +24,8 @@
   "builders": [
     {
       "type": "virtualbox-iso",
-      "iso_url": "http://ftp.iij.ad.jp/pub/FreeBSD/releases/ISO-IMAGES/12.1/FreeBSD-12.1-RELEASE-amd64-bootonly.iso",
-      "iso_checksum": "sha256:2c2ff1dba6b0e169d7e1a7181473a5869c71ce4cd3e76e512ef12bff43d72b4e",
+      "iso_url": "http://ftp.iij.ad.jp/pub/FreeBSD/releases/ISO-IMAGES/12.2/FreeBSD-12.2-RELEASE-amd64-bootonly.iso",
+      "iso_checksum": "sha256:f18412a1936d6f7df1e8e8857c98aeb53f752d43c732affee9c7a5615d4331b5",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_timeout": "10m",
@@ -43,8 +43,8 @@
     },
     {
       "type": "vmware-iso",
-      "iso_url": "http://ftp.iij.ad.jp/pub/FreeBSD/releases/ISO-IMAGES/12.1/FreeBSD-12.1-RELEASE-amd64-bootonly.iso",
-      "iso_checksum": "sha256:2c2ff1dba6b0e169d7e1a7181473a5869c71ce4cd3e76e512ef12bff43d72b4e",
+      "iso_url": "http://ftp.iij.ad.jp/pub/FreeBSD/releases/ISO-IMAGES/12.2/FreeBSD-12.2-RELEASE-amd64-bootonly.iso",
+      "iso_checksum": "sha256:f18412a1936d6f7df1e8e8857c98aeb53f752d43c732affee9c7a5615d4331b5",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_timeout": "10m",
