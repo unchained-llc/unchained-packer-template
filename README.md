@@ -8,19 +8,19 @@ CentOS 7 - 8 / FreeBSD 12 x64 + VirtualBox / VMWare for Packer Template
 ```
 cd centos7 or centos8 or freebsd12
 packer validate [ CentOS_7.json | CentOS_8.json | FreeBSD12.json ]
-VERSION=v20210402 packer build [ -only virtualbox-iso | -only vmware-iso ]  [ CentOS_7.json | CentOS_8.json | FreeBSD12.json ]
+VERSION=v20210415 packer build [ -only virtualbox-iso | -only vmware-iso ]  [ CentOS_7.json | CentOS_8.json | FreeBSD12.json ]
 ```
 
 ## Add Vagrant Box
 
 ```
-vagrant box add BOXNAME UNCHAINED-CentOS-7-x86_64-v20210402-virtualbox.box
-vagrant box add BOXNAME UNCHAINED-CentOS-8-x86_64-v20210402-virtualbox.box
-vagrant box add BOXNAME UNCHAINED-FreeBSD-12-x86_64-v20210402-virtualbox.box
+vagrant box add BOXNAME UNCHAINED-CentOS-7-x86_64-v20210415-virtualbox.box
+vagrant box add BOXNAME UNCHAINED-CentOS-8-x86_64-v20210415-virtualbox.box
+vagrant box add BOXNAME UNCHAINED-FreeBSD-12-x86_64-v20210415-virtualbox.box
 or
-vagrant box add BOXNAME UNCHAINED-CentOS-7-x86_64-v20210402-vmware.box
-vagrant box add BOXNAME UNCHAINED-CentOS-8-x86_64-v20210402-vmware.box
-vagrant box add BOXNAME UNCHAINED-FreeBSD-12-x86_64-v20210402-vmware.box
+vagrant box add BOXNAME UNCHAINED-CentOS-7-x86_64-v20210415-vmware.box
+vagrant box add BOXNAME UNCHAINED-CentOS-8-x86_64-v20210415-vmware.box
+vagrant box add BOXNAME UNCHAINED-FreeBSD-12-x86_64-v20210415-vmware.box
 ```
 
 ## Atlas a.k.a Vagrant Cloud
@@ -44,13 +44,13 @@ vagrant up
 ```
 mkdir centos
 cd centos
-vagrant init UNCHAINED-CentOS-7-x86_64-v20210402 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7-x86_64-v20210402-virtualbox.box
-vagrant init UNCHAINED-CentOS-8-x86_64-v20210402 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-8-x86_64-v20210402-virtualbox.box
-vagrant init UNCHAINED-FreeBSD-12-x86_64-v20210402 https://www.unchained.co.jp/pub/boxes/UNCHAINED-FreeBSD-12-x86_64-v20210402-virtualbox.box
+vagrant init UNCHAINED-CentOS-7-x86_64-v20210415 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7-x86_64-v20210415-virtualbox.box
+vagrant init UNCHAINED-CentOS-8-x86_64-v20210415 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-8-x86_64-v20210415-virtualbox.box
+vagrant init UNCHAINED-FreeBSD-12-x86_64-v20210415 https://www.unchained.co.jp/pub/boxes/UNCHAINED-FreeBSD-12-x86_64-v20210415-virtualbox.box
 or
-vagrant init UNCHAINED-CentOS-7-x86_64-v20210402 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7-x86_64-v20210402-vmware.box
-vagrant init UNCHAINED-CentOS-8-x86_64-v20210402 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-8-x86_64-v20210402-vmware.box
-vagrant init UNCHAINED-FreeBSD-12-x86_64-v20210402 https://www.unchained.co.jp/pub/boxes/UNCHAINED-FreeBSD-12-x86_64-v20210402-vmware.box
+vagrant init UNCHAINED-CentOS-7-x86_64-v20210415 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7-x86_64-v20210415-vmware.box
+vagrant init UNCHAINED-CentOS-8-x86_64-v20210415 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-8-x86_64-v20210415-vmware.box
+vagrant init UNCHAINED-FreeBSD-12-x86_64-v20210415 https://www.unchained.co.jp/pub/boxes/UNCHAINED-FreeBSD-12-x86_64-v20210415-vmware.box
 vagrant up
 ```
 

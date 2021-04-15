@@ -1,0 +1,41 @@
+export DISTRIBUTIONS="base.txz kernel.txz"
+export BSDINSTALL_DISTDIR="/media"
+export ZFSBOOT_DISKS="da0"
+export nonInteractive="YES"
+
+#!/bin/sh
+cat > /etc/rc.conf << EORC
+clear_tmp_enable="YES"
+syslogd_flags="-ss"
+sendmail_enable="NONE"
+hostname="vagrant"
+ifconfig_em0="DHCP"
+sshd_enable="YES"
+# Set dumpdev to "AUTO" to enable crash dumps, "NO" to disable
+dumpdev="NO"
+zfs_enable="YES"
+EORC
+
+cat > /boot/loader.conf << EOL
+kern.geom.label.disk_ident.enable="0"
+kern.geom.label.gptid.enable="0"
+opensolaris_load="YES"
+zfs_load="YES"
+autoboot_delay="2"
+EOL
+
+echo "vagrant" | pw useradd vagrant -h 0 -G wheel -m
+echo "vagrant" | pw usermod root -h 0
+
+
+env PAGER=/bin/cat /usr/sbin/freebsd-update --not-running-from-cron fetch install
+
+pkg install -y sudo curl
+mkdir -p /usr/local/etc/sudoers.d
+cat <<EOS > /usr/local/etc/sudoers.d/vagrant
+Defaults:vagrant !requiretty
+vagrant ALL=(ALL) NOPASSWD: ALL
+EOS
+chmod 440 /usr/local/etc/sudoers.d/vagrant
+
+reboot
