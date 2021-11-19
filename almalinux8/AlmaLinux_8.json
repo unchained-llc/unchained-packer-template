@@ -23,8 +23,8 @@
   "builders": [
     {
       "type": "virtualbox-iso",
-      "iso_url": "http://ftp.iij.ad.jp/pub/linux/almalinux/8/isos/x86_64/AlmaLinux-8.4-x86_64-boot.iso",
-      "iso_checksum": "sha256:76e8f56892e6d90706b142868eec51b6b8c015ec3792f8d9e0730da93a2d1162",
+      "iso_url": "http://ftp.iij.ad.jp/pub/linux/almalinux/8/isos/x86_64/AlmaLinux-8.5-x86_64-boot.iso",
+      "iso_checksum": "sha256:65b3b4c17ce322081e2d743ee420b37b7213f4b14d2ec4f3c4f026d57aa148ec",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_timeout": "10m",
@@ -36,15 +36,15 @@
       "hard_drive_interface": "sata",
       "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
       "guest_os_type": "RedHat_64",
-      "headless": "true",
+      "headless": "false",
       "http_directory": "http",
       "cpus": 2,
       "memory": 1024
     },
     {
       "type": "vmware-iso",
-      "iso_url": "http://ftp.iij.ad.jp/pub/linux/almalinux/8/isos/x86_64/AlmaLinux-8.4-x86_64-boot.iso",
-      "iso_checksum": "sha256:76e8f56892e6d90706b142868eec51b6b8c015ec3792f8d9e0730da93a2d1162",
+      "iso_url": "http://ftp.iij.ad.jp/pub/linux/almalinux/8/isos/x86_64/AlmaLinux-8.5-x86_64-boot.iso",
+      "iso_checksum": "sha256:65b3b4c17ce322081e2d743ee420b37b7213f4b14d2ec4f3c4f026d57aa148ec",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_timeout": "10m",
