@@ -36,7 +36,7 @@
       "disk_size": "100000",
       "hard_drive_interface": "scsi",
       "guest_os_type": "FreeBSD_64",
-      "headless": "false",
+      "headless": "true",
       "http_directory": "http",
       "cpus": 2,
       "memory": 1024
