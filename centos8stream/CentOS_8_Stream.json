@@ -23,8 +23,8 @@
   "builders": [
     {
       "type": "virtualbox-iso",
-      "iso_url": "http://ftp.iij.ad.jp/pub/linux/centos/8-stream/isos/x86_64/CentOS-Stream-8-x86_64-20211117-boot.iso",
-      "iso_checksum": "sha256:3e6e248ba18e50b32a9536e6005bcc4a514952fedd2fd07a26465d6edac2fd29",
+      "iso_url": "http://ftp.iij.ad.jp/pub/linux/centos/8-stream/isos/x86_64/CentOS-Stream-8-x86_64-20220525-boot.iso",
+      "iso_checksum": "sha256:c95585977e667f4ed15279e087df41b721f323ca9a9bd973efa72ea7af0cfbca",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_timeout": "10m",
@@ -43,8 +43,8 @@
     },
     {
       "type": "vmware-iso",
-      "iso_url": "http://ftp.iij.ad.jp/pub/linux/centos/8-stream/isos/x86_64/CentOS-Stream-8-x86_64-20211117-boot.iso",
-      "iso_checksum": "sha256:3e6e248ba18e50b32a9536e6005bcc4a514952fedd2fd07a26465d6edac2fd29",
+      "iso_url": "http://ftp.iij.ad.jp/pub/linux/centos/8-stream/isos/x86_64/CentOS-Stream-8-x86_64-20220525-boot.iso",
+      "iso_checksum": "sha256:c95585977e667f4ed15279e087df41b721f323ca9a9bd973efa72ea7af0cfbca",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_timeout": "10m",
