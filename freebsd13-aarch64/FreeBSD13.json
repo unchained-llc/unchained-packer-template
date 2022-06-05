@@ -1,0 +1,42 @@
+{
+  "variables": {
+    "version": "{{env `VERSION`}}"
+  },
+  "provisioners": [
+    {
+      "type": "shell",
+      "execute_command": "sudo {{.Vars}} sh {{.Path}}",
+      "scripts": [
+        "scripts/vagrant.sh",
+        "scripts/cleanup.sh",
+        "scripts/zerodisk.sh"
+      ]
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "vagrant",
+      "output": "UNCHAINED-FreeBSD-13-aarch64-{{user `version`}}-{{.Provider}}.box"
+    }
+  ],
+  "builders": [
+    {
+      "type": "parallels-iso",
+      "iso_url": "http://ftp.iij.ad.jp/pub/FreeBSD/releases/ISO-IMAGES/13.1/FreeBSD-13.1-RELEASE-arm64-aarch64-bootonly.iso",
+      "iso_checksum": "062b1cd8dd0f34e3e3b06d673d7f4eb28d3a179da4e654c9f7b7d00b10efa042",
+      "ssh_username": "vagrant",
+      "ssh_password": "vagrant",
+      "ssh_timeout": "10m",
+      "boot_command": [
+        "<enter><wait10><wait10><tab><enter><wait>mkdir /tmp/etc && mount -t unionfs /tmp/etc /etc && rm /etc/resolv.conf && dhclient vtnet0 && fetch -o /tmp/fetch.sh http://{{.HTTPIP}}:{{.HTTPPort}}/fetch.sh && sh /tmp/fetch.sh && fetch -o /tmp/bsdinstallscript http://{{.HTTPIP}}:{{.HTTPPort}}/bsdinstallscript && bsdinstall script /tmp/bsdinstallscript<enter>"
+      ],
+      "shutdown_command": "sudo /sbin/halt -p",
+      "disk_size": "100000",
+      "guest_os_type": "other",
+      "http_directory": "http",
+      "parallels_tools_mode": "disable",
+      "cpus": 2,
+      "memory": 1024
+    }
+  ]
+}

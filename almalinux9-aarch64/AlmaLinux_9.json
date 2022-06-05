@@ -1,0 +1,43 @@
+{
+  "variables": {
+    "version": "{{env `VERSION`}}"
+  },
+  "provisioners": [
+    {
+      "type": "shell",
+      "execute_command": "sudo {{.Vars}} sh {{.Path}}",
+      "scripts": [
+        "scripts/vagrant.sh",
+        "scripts/vmtools.sh",
+        "scripts/cleanup.sh",
+        "scripts/zerodisk.sh"
+      ]
+    }
+  ],
+  "post-processors": [
+    {
+      "type": "vagrant",
+      "output": "UNCHAINED-AlmaLinux-9-aarch64-{{user `version`}}-{{.Provider}}.box"
+    }
+  ],
+  "builders": [
+    {
+      "type": "parallels-iso",
+      "iso_url": "http://ftp.iij.ad.jp/pub/linux/almalinux/9/isos/aarch64/AlmaLinux-9-latest-aarch64-boot.iso",
+      "iso_checksum": "sha256:84a2fecdd8f84fb2c3ff098d6f0e120422424e37816942c37182b3c2a8816e19",
+      "ssh_username": "vagrant",
+      "ssh_password": "vagrant",
+      "ssh_timeout": "10m",
+      "boot_command": [
+        "e<wait><down><down><down><left> inst.text inst.ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<leftCtrlOn>x<leftCtrlOff>"
+      ],
+      "shutdown_command": "sudo /sbin/halt -p",
+      "disk_size": "100000",
+      "guest_os_type" : "linux",
+      "parallels_tools_flavor": "lin-arm",
+      "http_directory": "http",
+      "cpus": 2,
+      "memory": 1024
+    }
+  ]
+}
