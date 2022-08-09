@@ -3,22 +3,19 @@ unchained-packer-template
 
 FreeBSD 13 aarch64 / AlmaLinux 9 aarch64 + Parallels
 
-## Packer Build for VirtualBox
+## Packer Build for Parallels
 
 ```
 cd freebsd13-aarch64 or almalinux9-aarch64
 packer validate [  AlmaLinux_8.json | FreeBSD13.json ]
-VERSION=v20220112 packer build [ FreeBSD12.json | FreeBSD13.json ]
+VERSION=v20210810 packer build [ FreeBSD12.json | FreeBSD13.json ]
 ```
 
 ## Add Vagrant Box
 
 ```
-vagrant box add BOXNAME UNCHAINED-AlmaLinux-9-aarch64-v20220606-parallels.box
-vagrant box add BOXNAME UNCHAINED-FreeBSD-13-aarch64-v20220605-virtualbox.box
-or
-vagrant box add BOXNAME UNCHAINED-AlmaLinux-9-aarch64-v20220606-parallels.box
-vagrant box add BOXNAME UNCHAINED-FreeBSD-13-aarch64-v20220605-vmware.box
+vagrant box add BOXNAME UNCHAINED-AlmaLinux-9-aarch64-v20220810-parallels.box
+vagrant box add BOXNAME UNCHAINED-FreeBSD-13-aarch64-v20220810-parallels.box
 ```
 
 ## Atlas a.k.a Vagrant Cloud
@@ -44,11 +41,9 @@ vagrant up
 ```
 mkdir centos
 cd centos
-vagrant init UNCHAINED-AlmaLinux-9-aarch64-v20220606 https://www.unchained.co.jp/pub/boxes/UNCHAINED-AlmaLinux-9-aarch64-v20220606-parallels.box
-vagrant init UNCHAINED-FreeBSD-13-aarch64-v20220605 https://www.unchained.co.jp/pub/boxes/UNCHAINED-FreeBSD-13-aarch64-v20220605-virtualbox.box
+vagrant init UNCHAINED-AlmaLinux-9-aarch64-v20210810 https://www.unchained.co.jp/pub/boxes/UNCHAINED-AlmaLinux-9-aarch64-v20220810-parallels.box
 or
-vagrant init UNCHAINED-AlmaLinux-9-aarch64-v20220606 https://www.unchained.co.jp/pub/boxes/UNCHAINED-AlmaLinux-9-aarch64-v20220606-parallels.box
-vagrant init UNCHAINED-FreeBSD-13-aarch64-v20220605 https://www.unchained.co.jp/pub/boxes/UNCHAINED-FreeBSD-x86_64-aarch64-v20220605-vmware.box
+vagrant init UNCHAINED-FreeBSD-13-aarch64-v20210810 https://www.unchained.co.jp/pub/boxes/UNCHAINED-FreeBSD-x86_64-aarch64-v20220810-vmware.box
 ```
 
 ```
