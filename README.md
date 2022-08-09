@@ -1,35 +1,23 @@
 unchained-packer-template
 =============
 
-CentOS 7-8 8Stream / AlmaLinux 8 / FreeBSD 12 - 13 x64 + VirtualBox / VMWare for Packer Template + FreeBSD 13 / AlmaLinux 9 + Parallels
+FreeBSD 13 aarch64 / AlmaLinux 9 aarch64 + Parallels
 
 ## Packer Build for VirtualBox
 
 ```
-cd centos7 or centos8 or centos8stream or almalinux8 or freebsd12 or freebsd13 or freebsd13-aarch64 or almalinux9-aarch64
-packer validate [ CentOS_7.json | CentOS_8.json | CentOS_8_Stream.json | AlmaLinux_8.json | FreeBSD12.json | FreeBSD13.json ]
-VERSION=v20220112 packer build [ CentOS_7.json | CentOS_8.json | CentOS_8_Stream.json | AlmaLinux_8.json | FreeBSD12.json | FreeBSD13.json ]
+cd freebsd13-aarch64 or almalinux9-aarch64
+packer validate [  AlmaLinux_8.json | FreeBSD13.json ]
+VERSION=v20220112 packer build [ FreeBSD12.json | FreeBSD13.json ]
 ```
 
 ## Add Vagrant Box
 
 ```
-vagrant box add BOXNAME UNCHAINED-CentOS-7-x86_64-v20220112-virtualbox.box
-vagrant box add BOXNAME UNCHAINED-CentOS-8-x86_64-v20220112-virtualbox.box
-vagrant box add BOXNAME UNCHAINED-CentOS-8-Stream-x86_64-v20220112-virtualbox.box
-vagrant box add BOXNAME UNCHAINED-AlmaLinux-8-x86_64-v20220112-virtualbox.box
 vagrant box add BOXNAME UNCHAINED-AlmaLinux-9-aarch64-v20220606-parallels.box
-vagrant box add BOXNAME UNCHAINED-FreeBSD-12-x86_64-v20220112-virtualbox.box
-vagrant box add BOXNAME UNCHAINED-FreeBSD-13-x86_64-v20220112-virtualbox.box
 vagrant box add BOXNAME UNCHAINED-FreeBSD-13-aarch64-v20220605-virtualbox.box
 or
-vagrant box add BOXNAME UNCHAINED-CentOS-7-x86_64-v20220112-vmware.box
-vagrant box add BOXNAME UNCHAINED-CentOS-8-x86_64-v20220112-vmware.box
-vagrant box add BOXNAME UNCHAINED-CentOS-8-Stream-x86_64-v20220112-vmware.box
-vagrant box add BOXNAME UNCHAINED-AlmaLinux-8-x86_64-v20220112-vmware.box
 vagrant box add BOXNAME UNCHAINED-AlmaLinux-9-aarch64-v20220606-parallels.box
-vagrant box add BOXNAME UNCHAINED-FreeBSD-12-x86_64-v20220112-vmware.box
-vagrant box add BOXNAME UNCHAINED-FreeBSD-13-x86_64-v20220112-vmware.box
 vagrant box add BOXNAME UNCHAINED-FreeBSD-13-aarch64-v20220605-vmware.box
 ```
 
@@ -40,19 +28,7 @@ vagrant box add BOXNAME UNCHAINED-FreeBSD-13-aarch64-v20220605-vmware.box
 mkdir vagrant-virtualmachine
 cd vagrant-virtualmachine
 
-vagrant init unchained/centos7
-or
-vagrant init unchained/centos8
-or
-vagrant init unchained/centos8stream
-or
-vagrant init unchained/almalinux8
-or
 vagrant init unchained/almalinux9-aarch64
-or
-vagrant init unchained/freebsd12
-or
-vagrant init unchained/freebsd13
 or
 vagrant init unchained/freebsd13-aarch64
 ```
@@ -68,22 +44,10 @@ vagrant up
 ```
 mkdir centos
 cd centos
-vagrant init UNCHAINED-CentOS-7-x86_64-v20220112 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7-x86_64-v20220112-virtualbox.box
-vagrant init UNCHAINED-CentOS-8-x86_64-v20220112 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-8-x86_64-v20220112-virtualbox.box
-vagrant init UNCHAINED-CentOS-8-Stream-x86_64-v20220112 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-8-Stream-x86_64-v20220112-virtualbox.box
-vagrant init UNCHAINED-AlmaLinux-8-x86_64-v20220112 https://www.unchained.co.jp/pub/boxes/UNCHAINED-AlmaLinux-8-x86_64-v20220112-virtualbox.box
 vagrant init UNCHAINED-AlmaLinux-9-aarch64-v20220606 https://www.unchained.co.jp/pub/boxes/UNCHAINED-AlmaLinux-9-aarch64-v20220606-parallels.box
-vagrant init UNCHAINED-FreeBSD-12-x86_64-v20220112 https://www.unchained.co.jp/pub/boxes/UNCHAINED-FreeBSD-12-x86_64-v20220112-virtualbox.box
-vagrant init UNCHAINED-FreeBSD-13-x86_64-v20220112 https://www.unchained.co.jp/pub/boxes/UNCHAINED-FreeBSD-13-x86_64-v20220112-virtualbox.box
 vagrant init UNCHAINED-FreeBSD-13-aarch64-v20220605 https://www.unchained.co.jp/pub/boxes/UNCHAINED-FreeBSD-13-aarch64-v20220605-virtualbox.box
 or
-vagrant init UNCHAINED-CentOS-7-x86_64-v20220112 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-7-x86_64-v20220112-vmware.box
-vagrant init UNCHAINED-CentOS-8-x86_64-v20220112 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-8-x86_64-v20220112-vmware.box
-vagrant init UNCHAINED-CentOS-8-Stream-x86_64-v20220112 https://www.unchained.co.jp/pub/boxes/UNCHAINED-CentOS-8-Stream-x86_64-v20220112-vmware.box
-vagrant init UNCHAINED-AlmaLinux-8-x86_64-v20220112 https://www.unchained.co.jp/pub/boxes/UNCHAINED-AlmaLinux-8-x86_64-v20220112-vmware.box
 vagrant init UNCHAINED-AlmaLinux-9-aarch64-v20220606 https://www.unchained.co.jp/pub/boxes/UNCHAINED-AlmaLinux-9-aarch64-v20220606-parallels.box
-vagrant init UNCHAINED-FreeBSD-12-x86_64-v20220112 https://www.unchained.co.jp/pub/boxes/UNCHAINED-FreeBSD-12-x86_64-v20220112-vmware.box
-vagrant init UNCHAINED-FreeBSD-13-x86_64-v20220112 https://www.unchained.co.jp/pub/boxes/UNCHAINED-FreeBSD-13-x86_64-v20220112-vmware.box
 vagrant init UNCHAINED-FreeBSD-13-aarch64-v20220605 https://www.unchained.co.jp/pub/boxes/UNCHAINED-FreeBSD-x86_64-aarch64-v20220605-vmware.box
 ```
 
@@ -98,7 +62,7 @@ vagrant up
 
    # Every Vagrant virtual environment requires a box to build off of.
 -  config.vm.box = "base"
-+  config.vm.box = "unchained/centos7" or "unchained/centos8" or "unchained/centos8stream" or "unchained/almalinux8" or "unchained/freebsd12" or "unchained/freebsd13" or "unchained/freebsd13-aarch64" or "unchained/almalinux9-aarch64"
++  config.vm.box "unchained/freebsd13-aarch64" or "unchained/almalinux9-aarch64"
 
    # Create a forwarded port mapping which allows access to a specific port
    # within the machine from a port on the host machine. In the example below,

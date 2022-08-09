@@ -36,7 +36,8 @@
       "http_directory": "http",
       "parallels_tools_mode": "disable",
       "cpus": 2,
-      "memory": 1024
+      "memory": 1024,
+      "vm_name": "freebsd13-aarch64"
     }
   ]
 }

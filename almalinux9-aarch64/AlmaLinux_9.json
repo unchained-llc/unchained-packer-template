@@ -37,7 +37,8 @@
       "parallels_tools_flavor": "lin-arm",
       "http_directory": "http",
       "cpus": 2,
-      "memory": 1024
+      "memory": 1024,
+      "vm_name": "almalinux9-aarch64"
     }
   ]
 }
