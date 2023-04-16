@@ -8,7 +8,7 @@ FreeBSD 13 aarch64 / AlmaLinux 9 aarch64 + Parallels
 ```
 cd freebsd13-aarch64 or almalinux9-aarch64
 packer validate [  AlmaLinux_8.json | FreeBSD13.json ]
-VERSION=v20210810 packer build [ FreeBSD12.json | FreeBSD13.json ]
+VERSION=v20230416 packer build [ FreeBSD12.json | FreeBSD13.json ]
 ```
 
 ## Add Vagrant Box
@@ -41,9 +41,9 @@ vagrant up
 ```
 mkdir centos
 cd centos
-vagrant init UNCHAINED-AlmaLinux-9-aarch64-v20210810 https://www.unchained.co.jp/pub/boxes/UNCHAINED-AlmaLinux-9-aarch64-v20220810-parallels.box
+vagrant init UNCHAINED-AlmaLinux-9-aarch64-v20230416 https://www.unchained.co.jp/pub/boxes/UNCHAINED-AlmaLinux-9-aarch64-v20220810-parallels.box
 or
-vagrant init UNCHAINED-FreeBSD-13-aarch64-v20210810 https://www.unchained.co.jp/pub/boxes/UNCHAINED-FreeBSD-x86_64-aarch64-v20220810-vmware.box
+vagrant init UNCHAINED-FreeBSD-13-aarch64-v20230416 https://www.unchained.co.jp/pub/boxes/UNCHAINED-FreeBSD-x86_64-aarch64-v20220810-vmware.box
 ```
 
 ```

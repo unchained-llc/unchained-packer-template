@@ -24,7 +24,7 @@
     {
       "type": "parallels-iso",
       "iso_url": "http://ftp.iij.ad.jp/pub/linux/almalinux/9/isos/aarch64/AlmaLinux-9-latest-aarch64-boot.iso",
-      "iso_checksum": "sha256:84a2fecdd8f84fb2c3ff098d6f0e120422424e37816942c37182b3c2a8816e19",
+      "iso_checksum": "sha256:62fa5b37098b82a6657b678e28b52e9b50a5d2ec8e99db151557ad820e6f4e14",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_timeout": "10m",
