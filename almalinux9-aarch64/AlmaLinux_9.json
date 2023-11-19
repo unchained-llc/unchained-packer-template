@@ -23,8 +23,8 @@
   "builders": [
     {
       "type": "parallels-iso",
-      "iso_url": "http://ftp.iij.ad.jp/pub/linux/almalinux/9/isos/aarch64/AlmaLinux-9-latest-aarch64-boot.iso",
-      "iso_checksum": "sha256:62fa5b37098b82a6657b678e28b52e9b50a5d2ec8e99db151557ad820e6f4e14",
+      "iso_url": "http://ftp.iij.ad.jp/pub/linux/almalinux/9/isos/aarch64/AlmaLinux-9.3-aarch64-boot.iso",
+      "iso_checksum": "sha256:319b131bf07f369cd2508d00a65d8f5d9423929d6cc42a5f24662f7391f90acd",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_timeout": "10m",

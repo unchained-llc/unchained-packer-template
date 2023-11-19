@@ -1,33 +1,36 @@
 unchained-packer-template
 =============
 
-FreeBSD 13 aarch64 / AlmaLinux 9 aarch64 + Parallels
+FreeBSD 14 aarch64 / AlmaLinux 9 aarch64 + Parallels
 
 ## Packer Build for Parallels
 
 ```
-cd freebsd13-aarch64 or almalinux9-aarch64
-packer validate [  AlmaLinux_8.json | FreeBSD13.json ]
-VERSION=v20230416 packer build [ FreeBSD12.json | FreeBSD13.json ]
+packer plugins install github.com/parallels/parallels
+cd freebsd13-aarch64 or freebsd14-aarch64 or almalinux9-aarch64
+packer validate [  AlmaLinux_8.json | FreeBSD14.json ]
+VERSION=v20231119 packer build [ FreeBSD13.json | FreeBSD14.json ]
 ```
 
 ## Add Vagrant Box
 
 ```
-vagrant box add BOXNAME UNCHAINED-AlmaLinux-9-aarch64-v20220810-parallels.box
-vagrant box add BOXNAME UNCHAINED-FreeBSD-13-aarch64-v20220810-parallels.box
+vagrant box add BOXNAME UNCHAINED-AlmaLinux-9-aarch64-v20231119-parallels.box
+vagrant box add BOXNAME UNCHAINED-FreeBSD-13-aarch64-v20231119-parallels.box
+vagrant box add BOXNAME UNCHAINED-FreeBSD-14-aarch64-v20231119-parallels.box
 ```
 
 ## Atlas a.k.a Vagrant Cloud
 
 
 ```
-mkdir vagrant-virtualmachine
-cd vagrant-virtualmachine
+mkdir packer-virtualmachine
+cd packer-virtualmachine
 
 vagrant init unchained/almalinux9-aarch64
 or
 vagrant init unchained/freebsd13-aarch64
+vagrant init unchained/freebsd14-aarch64
 ```
 
 ```
@@ -39,11 +42,12 @@ vagrant up
 
 
 ```
-mkdir centos
-cd centos
-vagrant init UNCHAINED-AlmaLinux-9-aarch64-v20230416 https://www.unchained.co.jp/pub/boxes/UNCHAINED-AlmaLinux-9-aarch64-v20220810-parallels.box
+mkdir vagrant-virtualmachine
+cd vagrant-virtualmachine
+vagrant init UNCHAINED-AlmaLinux-9-aarch64-v20230416 https://www.unchained.co.jp/pub/boxes/UNCHAINED-AlmaLinux-9-aarch64-v20231119-parallels.box
 or
-vagrant init UNCHAINED-FreeBSD-13-aarch64-v20230416 https://www.unchained.co.jp/pub/boxes/UNCHAINED-FreeBSD-x86_64-aarch64-v20220810-vmware.box
+vagrant init UNCHAINED-FreeBSD-13-aarch64-v20230416 https://www.unchained.co.jp/pub/boxes/UNCHAINED-FreeBSD-x86_64-aarch64-v20231119-vmware.box
+vagrant init UNCHAINED-FreeBSD-14-aarch64-v20230416 https://www.unchained.co.jp/pub/boxes/UNCHAINED-FreeBSD-x86_64-aarch64-v20231119-vmware.box
 ```
 
 ```
@@ -57,7 +61,7 @@ vagrant up
 
    # Every Vagrant virtual environment requires a box to build off of.
 -  config.vm.box = "base"
-+  config.vm.box "unchained/freebsd13-aarch64" or "unchained/almalinux9-aarch64"
++  config.vm.box "unchained/freebsd13-aarch64" or "unchained/freebsd14-aarch64" or "unchained/almalinux9-aarch64"
 
    # Create a forwarded port mapping which allows access to a specific port
    # within the machine from a port on the host machine. In the example below,

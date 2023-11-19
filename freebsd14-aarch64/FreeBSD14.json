@@ -17,14 +17,15 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "UNCHAINED-FreeBSD-13-aarch64-{{user `version`}}-{{.Provider}}.box",
-      "vagrantfile_template": "Vagrantfile.rb"}
+      "output": "UNCHAINED-FreeBSD-14-aarch64-{{user `version`}}-{{.Provider}}.box",
+      "vagrantfile_template": "Vagrantfile.rb"
+    }
   ],
   "builders": [
     {
       "type": "parallels-iso",
-      "iso_url": "https://download.freebsd.org/releases/arm64/aarch64/ISO-IMAGES/13.2/FreeBSD-13.2-RELEASE-arm64-aarch64-bootonly.iso",
-      "iso_checksum": "4f329bc5fe76240da19f06bef3dc9f38e8198354931756ad484880375d332edebc952b4c89833e2ee8b529c3ba8887444dd545637626095e9f461954bccc9cf9",
+      "iso_url": "https://download.freebsd.org/releases/arm64/aarch64/ISO-IMAGES/14.0/FreeBSD-14.0-RELEASE-arm64-aarch64-bootonly.iso",
+      "iso_checksum": "7088fa8303a5acba33655fc3b7ffcf7c70560353f723eaae8518c5ce08a27ba807b9e475fd55e9601b5b10161faa792289551821c644f8cb85b8cde758e58edf",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_timeout": "10m",
@@ -38,7 +39,7 @@
       "parallels_tools_mode": "disable",
       "cpus": 2,
       "memory": 1024,
-      "vm_name": "freebsd13-aarch64"
+      "vm_name": "freebsd14-aarch64"
     }
   ]
 }
