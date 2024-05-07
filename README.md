@@ -1,23 +1,23 @@
 unchained-packer-template
 =============
 
-FreeBSD 14 aarch64 / AlmaLinux 9 aarch64 + Parallels
+FreeBSD 13 aarch64 / FreeBSD 14 aarch64 / AlmaLinux 9 aarch64 + Parallels
 
 ## Packer Build for Parallels
 
 ```
 packer plugins install github.com/parallels/parallels
 cd freebsd13-aarch64 or freebsd14-aarch64 or almalinux9-aarch64
-packer validate [  AlmaLinux_8.json | FreeBSD14.json ]
-VERSION=v20231119 packer build [ FreeBSD13.json | FreeBSD14.json ]
+packer validate [ FreeBSD13.json | FreeBSD14.json | AlmaLinux_9.json ]
+VERSION=v20240507 packer build [ FreeBSD13.json | FreeBSD14.json | AlmaLinux_9.json ]
 ```
 
 ## Add Vagrant Box
 
 ```
-vagrant box add BOXNAME UNCHAINED-AlmaLinux-9-aarch64-v20231119-parallels.box
-vagrant box add BOXNAME UNCHAINED-FreeBSD-13-aarch64-v20231119-parallels.box
-vagrant box add BOXNAME UNCHAINED-FreeBSD-14-aarch64-v20231119-parallels.box
+vagrant box add BOXNAME UNCHAINED-AlmaLinux-9-aarch64-v20240507-parallels.box
+vagrant box add BOXNAME UNCHAINED-FreeBSD-13-aarch64-v20240507-parallels.box
+vagrant box add BOXNAME UNCHAINED-FreeBSD-14-aarch64-v20240507-parallels.box
 ```
 
 ## Atlas a.k.a Vagrant Cloud
@@ -44,10 +44,10 @@ vagrant up
 ```
 mkdir vagrant-virtualmachine
 cd vagrant-virtualmachine
-vagrant init UNCHAINED-AlmaLinux-9-aarch64-v20230416 https://www.unchained.co.jp/pub/boxes/UNCHAINED-AlmaLinux-9-aarch64-v20231119-parallels.box
+vagrant init UNCHAINED-AlmaLinux-9-aarch64-v20240507 https://www.unchained.co.jp/pub/boxes/UNCHAINED-AlmaLinux-9-aarch64-v20240507-parallels.box
 or
-vagrant init UNCHAINED-FreeBSD-13-aarch64-v20230416 https://www.unchained.co.jp/pub/boxes/UNCHAINED-FreeBSD-x86_64-aarch64-v20231119-vmware.box
-vagrant init UNCHAINED-FreeBSD-14-aarch64-v20230416 https://www.unchained.co.jp/pub/boxes/UNCHAINED-FreeBSD-x86_64-aarch64-v20231119-vmware.box
+vagrant init UNCHAINED-FreeBSD-13-aarch64-v20240507 https://www.unchained.co.jp/pub/boxes/UNCHAINED-FreeBSD-x86_64-aarch64-v20240507-vmware.box
+vagrant init UNCHAINED-FreeBSD-14-aarch64-v20240507 https://www.unchained.co.jp/pub/boxes/UNCHAINED-FreeBSD-x86_64-aarch64-v20240507-vmware.box
 ```
 
 ```
