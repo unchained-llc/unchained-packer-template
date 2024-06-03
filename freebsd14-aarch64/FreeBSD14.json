@@ -24,8 +24,8 @@
   "builders": [
     {
       "type": "parallels-iso",
-      "iso_url": "https://download.freebsd.org/releases/arm64/aarch64/ISO-IMAGES/14.0/FreeBSD-14.0-RELEASE-arm64-aarch64-bootonly.iso",
-      "iso_checksum": "7088fa8303a5acba33655fc3b7ffcf7c70560353f723eaae8518c5ce08a27ba807b9e475fd55e9601b5b10161faa792289551821c644f8cb85b8cde758e58edf",
+      "iso_url": "https://download.freebsd.org/releases/arm64/aarch64/ISO-IMAGES/14.1/FreeBSD-14.1-RELEASE-arm64-aarch64-bootonly.iso",
+      "iso_checksum": "5565f27bf03512ae7507b0fc181db0409fa508485efc2cea0da7cf678914c9bc09388ad287f0cf6ff8a8579ffe763dd782759ab3349b4ca138b06285121731b3",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_timeout": "10m",
