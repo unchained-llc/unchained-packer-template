@@ -9,15 +9,15 @@ FreeBSD 13 aarch64 / FreeBSD 14 aarch64 / AlmaLinux 9 aarch64 + Parallels
 packer plugins install github.com/parallels/parallels
 cd freebsd13-aarch64 or freebsd14-aarch64 or almalinux9-aarch64
 packer validate [ FreeBSD13.json | FreeBSD14.json | AlmaLinux_9.json ]
-VERSION=v20240808 packer build [ FreeBSD13.json | FreeBSD14.json | AlmaLinux_9.json ]
+VERSION=v20241202 packer build [ FreeBSD13.json | FreeBSD14.json | AlmaLinux_9.json ]
 ```
 
 ## Add Vagrant Box
 
 ```
-vagrant box add BOXNAME UNCHAINED-AlmaLinux-9-aarch64-v20240808-parallels.box
-vagrant box add BOXNAME UNCHAINED-FreeBSD-13-aarch64-v20240808-parallels.box
-vagrant box add BOXNAME UNCHAINED-FreeBSD-14-aarch64-v20240808-parallels.box
+vagrant box add BOXNAME UNCHAINED-AlmaLinux-9-aarch64-v20241202-parallels.box
+vagrant box add BOXNAME UNCHAINED-FreeBSD-13-aarch64-v20241202-parallels.box
+vagrant box add BOXNAME UNCHAINED-FreeBSD-14-aarch64-v20241202-parallels.box
 ```
 
 ## Atlas a.k.a Vagrant Cloud
@@ -44,10 +44,10 @@ vagrant up
 ```
 mkdir vagrant-virtualmachine
 cd vagrant-virtualmachine
-vagrant init UNCHAINED-AlmaLinux-9-aarch64-v20240808 https://www.unchained.co.jp/pub/boxes/UNCHAINED-AlmaLinux-9-aarch64-v20240808-parallels.box
+vagrant init UNCHAINED-AlmaLinux-9-aarch64-v20241202 https://www.unchained.co.jp/pub/boxes/UNCHAINED-AlmaLinux-9-aarch64-v20241202-parallels.box
 or
-vagrant init UNCHAINED-FreeBSD-13-aarch64-v20240808 https://www.unchained.co.jp/pub/boxes/UNCHAINED-FreeBSD-x86_64-aarch64-v20240808-vmware.box
-vagrant init UNCHAINED-FreeBSD-14-aarch64-v20240808 https://www.unchained.co.jp/pub/boxes/UNCHAINED-FreeBSD-x86_64-aarch64-v20240808-vmware.box
+vagrant init UNCHAINED-FreeBSD-13-aarch64-v20241202 https://www.unchained.co.jp/pub/boxes/UNCHAINED-FreeBSD-x86_64-aarch64-v20241202-vmware.box
+vagrant init UNCHAINED-FreeBSD-14-aarch64-v20241202 https://www.unchained.co.jp/pub/boxes/UNCHAINED-FreeBSD-x86_64-aarch64-v20241202-vmware.box
 ```
 
 ```
