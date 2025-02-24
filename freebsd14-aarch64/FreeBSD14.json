@@ -30,7 +30,7 @@
       "ssh_password": "vagrant",
       "ssh_timeout": "10m",
       "boot_command": [
-        "<enter><wait10><wait10><tab><enter><wait>mkdir /tmp/etc && mount -t unionfs /tmp/etc /etc && rm /etc/resolv.conf && dhclient vtnet0 && fetch -o /tmp/fetch.sh http://{{.HTTPIP}}:{{.HTTPPort}}/fetch.sh && sh /tmp/fetch.sh && fetch -o /tmp/bsdinstallscript http://{{.HTTPIP}}:{{.HTTPPort}}/bsdinstallscript && bsdinstall script /tmp/bsdinstallscript<enter>"
+        "<wait10><wait10><tab><enter><wait>mkdir /tmp/etc && mount -t unionfs /tmp/etc /etc && rm /etc/resolv.conf && dhclient vtnet0 && fetch -o /tmp/fetch.sh http://{{.HTTPIP}}:{{.HTTPPort}}/fetch.sh && sh /tmp/fetch.sh && fetch -o /tmp/bsdinstallscript http://{{.HTTPIP}}:{{.HTTPPort}}/bsdinstallscript && bsdinstall script /tmp/bsdinstallscript<enter>"
       ],
       "shutdown_command": "sudo /sbin/halt -p",
       "disk_size": "100000",
