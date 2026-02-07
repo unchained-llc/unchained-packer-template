@@ -17,14 +17,14 @@
   "post-processors": [
     {
       "type": "vagrant",
-      "output": "UNCHAINED-AlmaLinux-9-aarch64-{{user `version`}}-{{.Provider}}.box"
+      "output": "UNCHAINED-AlmaLinux-10-aarch64-{{user `version`}}-{{.Provider}}.box"
     }
   ],
   "builders": [
     {
       "type": "parallels-iso",
-      "iso_url": "http://ftp.iij.ad.jp/pub/linux/almalinux/9/isos/aarch64/AlmaLinux-9-latest-aarch64-boot.iso",
-      "iso_checksum": "sha256:fff9af332c09542b29ac04ae61d04f3951fcb4371beefa6be80d1d9d007e9599",
+      "iso_url": "http://ftp.iij.ad.jp/pub/linux/almalinux/10/isos/aarch64/AlmaLinux-10-latest-aarch64-boot.iso",
+      "iso_checksum": "sha256:76cdd787aeb9c786e589c0ebb625ca50fa9864c54293330be29b258f10e0b6b8",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_timeout": "10m",
@@ -38,7 +38,7 @@
       "http_directory": "http",
       "cpus": 2,
       "memory": 1024,
-      "vm_name": "almalinux9-aarch64"
+      "vm_name": "almalinux10-aarch64"
     }
   ]
 }
