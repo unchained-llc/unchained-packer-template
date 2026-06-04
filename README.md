@@ -6,11 +6,13 @@ FreeBSD 14 aarch64 / FreeBSD 15 aarch64 / AlmaLinux 9 aarch64 / AlmaLinux 10 aar
 ## Packer Build for Parallels
 
 ```
-packer plugins install github.com/parallels/parallels
 cd freebsd14-aarch64 or freebsd15-aarch64 or almalinux9-aarch64 or almalinux10-aarch64
-packer validate [ FreeBSD14.json | FreeBSD15.json | AlmaLinux_9.json | AlmaLinux_10.json ]
-VERSION=v20250608 packer build [ FreeBSD14.json | FreeBSD15.json | AlmaLinux_9.json | AlmaLinux_10.json ]
+packer init .
+packer validate [ FreeBSD14.pkr.hcl | FreeBSD15.pkr.hcl | AlmaLinux_9.pkr.hcl | AlmaLinux_10.pkr.hcl ]
+VERSION=v20250608 packer build [ FreeBSD14.pkr.hcl | FreeBSD15.pkr.hcl | AlmaLinux_9.pkr.hcl | AlmaLinux_10.pkr.hcl ]
 ```
+
+
 
 ## Add Vagrant Box
 
