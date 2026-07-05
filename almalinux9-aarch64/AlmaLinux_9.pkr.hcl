@@ -14,7 +14,7 @@ variable "version" {
 
 source "parallels-iso" "almalinux9_aarch64" {
   iso_url              = "http://ftp.iij.ad.jp/pub/linux/almalinux/9/isos/aarch64/AlmaLinux-9-latest-aarch64-boot.iso"
-  iso_checksum         = "sha256:fff9af332c09542b29ac04ae61d04f3951fcb4371beefa6be80d1d9d007e9599"
+  iso_checksum         = "sha256:144b4a6c0535dc393864c82238c96e196f703c1ba7ce0096551db517f55310dc"
   ssh_username         = "vagrant"
   ssh_password         = "vagrant"
   ssh_timeout          = "10m"
