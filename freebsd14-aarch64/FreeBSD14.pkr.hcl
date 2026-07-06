@@ -13,8 +13,8 @@ variable "version" {
 }
 
 source "parallels-iso" "freebsd14_aarch64" {
-  iso_url            = "https://download.freebsd.org/releases/arm64/aarch64/ISO-IMAGES/14.3/FreeBSD-14.3-RELEASE-arm64-aarch64-bootonly.iso"
-  iso_checksum       = "0904581f4ded98a48acad53fa1352caa767b88824c28a62983ba71a1fc93a5c506de9512da8e959b53b6fb806879656ec7bb1b78d52fdb7b64d17c1f2dd8afc1"
+  iso_url            = "https://download.freebsd.org/releases/arm64/aarch64/ISO-IMAGES/14.4/FreeBSD-14.4-RELEASE-arm64-aarch64-bootonly.iso"
+  iso_checksum       = "633635c0a621a2f37ce786a724cdadefc161ea6d03e0bc6a306be2df09e4d511a162e67ee8a666a9a6cbef16b892a2da3eb97ee8f3db1047837969b7975d1f69"
   ssh_username       = "vagrant"
   ssh_password       = "vagrant"
   ssh_timeout        = "10m"

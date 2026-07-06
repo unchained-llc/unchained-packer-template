@@ -13,8 +13,8 @@ variable "version" {
 }
 
 source "parallels-iso" "freebsd15_aarch64" {
-  iso_url            = "https://download.freebsd.org/releases/arm64/aarch64/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-arm64-aarch64-bootonly.iso"
-  iso_checksum       = "ea491a104ce78e86402ad0d70278c257ef8b3118e67d4fe02b4dec8a0c5b793abeb63648a9b56525fd75209b60b6b24a05b99137428b98d0f0c45137ef6691b8"
+  iso_url            = "https://download.freebsd.org/releases/arm64/aarch64/ISO-IMAGES/15.1/FreeBSD-15.1-RELEASE-arm64-aarch64-bootonly.iso"
+  iso_checksum       = "85192ab914601ba7fdac334868922e769f1d859523da925202a01e7f33edb4bb61003f9265581fcc374a7c18d8990367c65163cb84e52a5f0573d9c57ec68e05"
   ssh_username       = "vagrant"
   ssh_password       = "vagrant"
   ssh_timeout        = "10m"
